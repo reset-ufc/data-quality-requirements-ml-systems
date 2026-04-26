@@ -1,0 +1,150 @@
+respondent_id,question,code,theme,quote
+0,Q10,experiencia_positiva_geral,,"foi uma ótima experiência, embora complicada"
+1,Q10,sem_experiencia,T6_Lacuna_ER_para_ML,Não
+2,Q10,experiencia_inicial_projeto,,primeiros passos quando começamos um projeto
+3,Q10,requisitos_para_modelo_ml_distintos,T6_Lacuna_ER_para_ML,"levantei a necessidade de termos requisitos claros... para o modelo, para alinhar comportamento e performance às expectativas dos stakeholders"
+3,Q10,colaboracao_com_qa,,"levantei a necessidade de termos requisitos claros... para o modelo, para alinhar comportamento e performance às expectativas dos stakeholders"
+3,Q10,alinhamento_stakeholders,,"levantei a necessidade de termos requisitos claros... para o modelo, para alinhar comportamento e performance às expectativas dos stakeholders"
+4,Q10,experiencia_completa_ciclo,,todas as fases do ciclo de um projeto em Ciência de Dados
+5,Q10,sem_experiencia,T6_Lacuna_ER_para_ML,Não
+6,Q10,sem_experiencia,T6_Lacuna_ER_para_ML,Não
+7,Q10,experiencia_diversificada,,"projetos de diversas aplicações, metodologias e tecnologias"
+8,Q10,documentacao_formal,,"Registro formal dos requisitos em documentos detalhados, especificações funcionais e não funcionais, casos de uso"
+9,Q10,experiencia_apenas_academica,T6_Lacuna_ER_para_ML,apenas em trabalhos acadêmicos
+10,Q10,elicitacao_estruturada,,"elicitação de requisitos, análise de documentos e entrevistas semiestruturadas"
+11,Q10,sem_experiencia,T6_Lacuna_ER_para_ML,Nunca participei
+12,Q10,experiencia_apenas_academica,T6_Lacuna_ER_para_ML,em disciplinas na universidade... extrema importância porque era o que nos guiava no desenvolvimento
+12,Q10,reconhecimento_importancia,,em disciplinas na universidade... extrema importância porque era o que nos guiava no desenvolvimento
+13,Q10,papel_periferico,T6_Lacuna_ER_para_ML,mais voltada para a documentação do código e na criação de diagramas referentes a pipelines
+13,Q10,foco_documentacao_codigo,T6_Lacuna_ER_para_ML,mais voltada para a documentação do código e na criação de diagramas referentes a pipelines
+14,Q10,foco_dependencias,T6_Lacuna_ER_para_ML,Somente documentação de dependências e bibliotecas
+15,Q10,refinamento_iterativo,,"refinamento de requisitos, discutimos com a equipe a complexidade e capacidade do time"
+15,Q10,discussao_complexidade,,"refinamento de requisitos, discutimos com a equipe a complexidade e capacidade do time"
+16,Q10,requisitos_processo_negocio,,escopo analise e desenho dos processos de negócio implicados na mudança
+17,Q10,sem_experiencia,T6_Lacuna_ER_para_ML,Não
+18,Q10,experiencia_minima,T6_Lacuna_ER_para_ML,Sim
+19,Q10,prazos_curtos_limitam,T6_Lacuna_ER_para_ML,prazos sempre foram extremamente curtos para realizar um estudo aprofundado... empresas com menor capital tendem a ser mais exploratórias e desorganizadas
+19,Q10,foco_coleta,,prazos sempre foram extremamente curtos para realizar um estudo aprofundado... empresas com menor capital tendem a ser mais exploratórias e desorganizadas
+19,Q10,variabilidade_porte_empresa,T1_Contextualismo,prazos sempre foram extremamente curtos para realizar um estudo aprofundado... empresas com menor capital tendem a ser mais exploratórias e desorganizadas
+20,Q10,sem_experiencia,T6_Lacuna_ER_para_ML,Nunca participei de atividades de engenharia de requisitos
+21,Q10,resposta_vazia,,…
+22,Q10,foco_funcionais_apis,T6_Lacuna_ER_para_ML,requisitos funcionais como integrações utilizando API e cadastros de usuarios
+23,Q10,dependencia_especialistas_dominio,T6_Lacuna_ER_para_ML,"trabalhoso e demorado, pois é preciso ter o entendimento do contexto de negócio... regras estão na cabeça do usuário"
+23,Q10,trabalho_demorado,T6_Lacuna_ER_para_ML,"trabalhoso e demorado, pois é preciso ter o entendimento do contexto de negócio... regras estão na cabeça do usuário"
+24,Q10,sem_experiencia,T6_Lacuna_ER_para_ML,Não
+25,Q10,experiencia_completa_ciclo,,descrever e avaliar a viabilidade na fase de concepção
+25,Q10,avaliacao_viabilidade,,descrever e avaliar a viabilidade na fase de concepção
+26,Q10,reconhecimento_importancia,,"etapa crucial para a definição de um bom escopo, evitando atritos entre a equipe e o cliente"
+26,Q10,prevencao_atritos,,"etapa crucial para a definição de um bom escopo, evitando atritos entre a equipe e o cliente"
+27,Q10,elicitacao_informal,T6_Lacuna_ER_para_ML,"de maneira informal com os membros relevantes do time em uma reunião, sem geração de um documento formalizando tudo"
+27,Q10,sem_documento_formal,T6_Lacuna_ER_para_ML,"de maneira informal com os membros relevantes do time em uma reunião, sem geração de um documento formalizando tudo"
+28,Q10,jornadas_usuario,,jornadas de usuário conversando com clientes para entender como um produto de IA poderia ajudar no cotidiano
+28,Q10,foco_publico_alvo,,jornadas de usuário conversando com clientes para entender como um produto de IA poderia ajudar no cotidiano
+29,Q10,refinamento_iterativo,,"reunião com o cliente onde ele faz o levantamento dos cenários... criação das Histórias, Cenários e Requisitos Funcionais e Não Funcionais"
+29,Q10,levantamento_cenarios,,"reunião com o cliente onde ele faz o levantamento dos cenários... criação das Histórias, Cenários e Requisitos Funcionais e Não Funcionais"
+29,Q10,requisitos_funcionais_e_nfr,,"reunião com o cliente onde ele faz o levantamento dos cenários... criação das Histórias, Cenários e Requisitos Funcionais e Não Funcionais"
+30,Q10,experiencia_completa_ciclo,,"análise de sistemas anteriores e documentações existentes, além de entrevistas e confecção de protótipos"
+30,Q10,analise_sistemas_anteriores,,"análise de sistemas anteriores e documentações existentes, além de entrevistas e confecção de protótipos"
+30,Q10,prototipos,,"análise de sistemas anteriores e documentações existentes, além de entrevistas e confecção de protótipos"
+31,Q10,sem_experiencia,T6_Lacuna_ER_para_ML,Não
+7,Q12,garbage_in_garbage_out,T2_Garbage_in_out,"se os dados forem uma bagunça, o modelo só vai cuspir lixo sofisticado"
+7,Q12,impacto_modelo,T2_Garbage_in_out,"se os dados forem uma bagunça, o modelo só vai cuspir lixo sofisticado"
+11,Q12,todas_importantes,T4_Hierarquia_qualidade,separação foi mais pensando em algo que podemos fazer/corrigir em um segundo momento ou algo que é fundamental de ser pensado desde o início... qualidade dos dados são coisas inegociáveis
+11,Q12,distincao_critico_vs_corrigivel,T4_Hierarquia_qualidade,separação foi mais pensando em algo que podemos fazer/corrigir em um segundo momento ou algo que é fundamental de ser pensado desde o início... qualidade dos dados são coisas inegociáveis
+11,Q12,qualidade_intrinseca_inegociavel,T4_Hierarquia_qualidade,separação foi mais pensando em algo que podemos fazer/corrigir em um segundo momento ou algo que é fundamental de ser pensado desde o início... qualidade dos dados são coisas inegociáveis
+12,Q12,todas_importantes,T4_Hierarquia_qualidade,todas as características são de extrema importância... dados de má qualidade são um grande problema na área e dificultam o desenvolvimento de novas técnicas
+12,Q12,impacto_pesquisa_e_mercado,,todas as características são de extrema importância... dados de má qualidade são um grande problema na área e dificultam o desenvolvimento de novas técnicas
+12,Q12,viabilizar_novas_tecnicas,,todas as características são de extrema importância... dados de má qualidade são um grande problema na área e dificultam o desenvolvimento de novas técnicas
+14,Q12,reflexo_real,,refletir com eficiência e sem muitos erros... compreensíveis até certo ponto para os humanos... confiáveis em termos de garantir que a informação final não esteja errada
+14,Q12,interpretabilidade_humana,,refletir com eficiência e sem muitos erros... compreensíveis até certo ponto para os humanos... confiáveis em termos de garantir que a informação final não esteja errada
+14,Q12,confiabilidade_resultado,,refletir com eficiência e sem muitos erros... compreensíveis até certo ponto para os humanos... confiáveis em termos de garantir que a informação final não esteja errada
+16,Q12,contexto_dependente,T1_Contextualismo,Dependem do escopo do projeto e o do objetivo do aprendizado
+17,Q12,qualidade_pipeline,T2_Garbage_in_out,"se isso não acontecer, todo o resultado proveniente do seu pipeline de ML pode estar comprometido... a rastreabilidade é super importante para a execução de testes com dados mais antigos, debug ou rollback"
+17,Q12,importancia_relacional,,"se isso não acontecer, todo o resultado proveniente do seu pipeline de ML pode estar comprometido... a rastreabilidade é super importante para a execução de testes com dados mais antigos, debug ou rollback"
+19,Q12,diferenca_importancia_vs_necessidade,T6_Lacuna_ER_para_ML,diferença entre algo ser importante e ser necessário... a importância é limitada pela urgência dos prazos
+19,Q12,prazo_aperta_necessidade,T6_Lacuna_ER_para_ML,diferença entre algo ser importante e ser necessário... a importância é limitada pela urgência dos prazos
+25,Q12,relevante_mas_nao_impeditivo,,"critérios relevantes, mas que não promovem impedimentos"
+26,Q12,impacto_metricas,,"dados mais atuais, precisos e coerentes com o cenário real tendem a apresentar resultados melhores nas métricas"
+26,Q12,reflexo_real,,"dados mais atuais, precisos e coerentes com o cenário real tendem a apresentar resultados melhores nas métricas"
+29,Q12,prevencao_falha_silenciosa,T2_Garbage_in_out,"a negligência a esses pontos... podem levar a resultados que parecem promissores, mas que em uma análise mais profunda pode estar relacionada a dados que não são devidamente limpos"
+29,Q12,impacto_modelo,T2_Garbage_in_out,"a negligência a esses pontos... podem levar a resultados que parecem promissores, mas que em uma análise mais profunda pode estar relacionada a dados que não são devidamente limpos"
+30,Q12,qualidade_pipeline,T2_Garbage_in_out,"se o dado não tiver a maioria desses atributos, qualquer resultado de qualquer modelo de ML não será confiável"
+30,Q12,confiabilidade_resultado,,"se o dado não tiver a maioria desses atributos, qualquer resultado de qualquer modelo de ML não será confiável"
+31,Q12,confiabilidade_resultado,,"dados devem ser confiáveis e fazer sentido, é fundamental para que o sistema funcione corretamente quando colocado em produção"
+31,Q12,importancia_producao,,"dados devem ser confiáveis e fazer sentido, é fundamental para que o sistema funcione corretamente quando colocado em produção"
+12,Q14,reprodutibilidade,,"essenciais para reproduzir técnicas, seja para fins de pesquisa ou mercado... influencia também em um desenvolvimento mais rápido"
+12,Q14,acelerar_desenvolvimento,,"essenciais para reproduzir técnicas, seja para fins de pesquisa ou mercado... influencia também em um desenvolvimento mais rápido"
+15,Q14,reflexo_dominio,,garantir que os dados realmente refletem a área de conhecimento
+19,Q14,contexto_dependente,T1_Contextualismo,"vai depender demais do projeto em questão, então prefiro colocar neutro"
+19,Q14,neutro_por_indecisao,,"vai depender demais do projeto em questão, então prefiro colocar neutro"
+20,Q14,contexto_dependente,T1_Contextualismo,todos requisitos são essenciais dependendo do contexto... a conformidade depende do quão sensíveis forem os dados... a eficiência vai depender se o sistema é utilizado em tempo real
+20,Q14,sensibilidade_dominio,T1_Contextualismo,todos requisitos são essenciais dependendo do contexto... a conformidade depende do quão sensíveis forem os dados... a eficiência vai depender se o sistema é utilizado em tempo real
+20,Q14,requisitos_temporais,T1_Contextualismo,todos requisitos são essenciais dependendo do contexto... a conformidade depende do quão sensíveis forem os dados... a eficiência vai depender se o sistema é utilizado em tempo real
+25,Q14,relevante_nao_funcional,,"prioritário, mas não impactam requisitos funcionais"
+26,Q14,reflexo_real,,consistência e completude indicarão o quanto os dados representam os cenários de um ambiente real
+26,Q14,impacto_metricas,,consistência e completude indicarão o quanto os dados representam os cenários de um ambiente real
+29,Q14,prevencao_overfitting_underfitting,T2_Garbage_in_out,"se não considerados no início do projeto, podem levar a modelos com overfitting ou underfitting"
+29,Q14,prioridade_inicio_projeto,,"se não considerados no início do projeto, podem levar a modelos com overfitting ou underfitting"
+30,Q14,qualidade_imprescindivel,T2_Garbage_in_out,"todo dado utilizado na execução de algoritmos de ML deve ter qualidade, senão todo resultado será duvidoso e não confiável. Não existe meio termo"
+30,Q14,sem_meio_termo,T2_Garbage_in_out,"todo dado utilizado na execução de algoritmos de ML deve ter qualidade, senão todo resultado será duvidoso e não confiável. Não existe meio termo"
+31,Q14,confiabilidade_resultado,,"para tomar decisões com base nesses dados, a informação deve ser precisa e consistente"
+31,Q14,importancia_producao,,"para tomar decisões com base nesses dados, a informação deve ser precisa e consistente"
+31,Q14,tomada_de_decisao,,"para tomar decisões com base nesses dados, a informação deve ser precisa e consistente"
+0,Q15,contexto_dependente,T1_Contextualismo,"para modelos críticos, como risco de crédito, priorizamos interpretabilidade... combinamos regras simples com machine learning sofisticado"
+0,Q15,interpretabilidade_modelos_criticos,T5_Praticas_Ferramentas,"para modelos críticos, como risco de crédito, priorizamos interpretabilidade... combinamos regras simples com machine learning sofisticado"
+0,Q15,trade_off_precisao_eficiencia,T3_Trade_offs,"para modelos críticos, como risco de crédito, priorizamos interpretabilidade... combinamos regras simples com machine learning sofisticado"
+0,Q15,hibridismo_regras_e_ml,T5_Praticas_Ferramentas,"para modelos críticos, como risco de crédito, priorizamos interpretabilidade... combinamos regras simples com machine learning sofisticado"
+1,Q15,hierarquia_precisao_compreensibilidade_eficiencia,T4_Hierarquia_qualidade,"prioridade na precisão, seguido de compreensibilidade e eficiência"
+2,Q15,contexto_dependente_aplicacao,T1_Contextualismo,depende de como nossa aplicação precisará responder ao usuário
+4,Q15,contexto_dependente,T1_Contextualismo,decisões estratégicas que dependem do contexto do projeto
+5,Q15,selecao_features,T5_Praticas_Ferramentas,"seleção de features, redução de dimensionalidade e limpeza de dados... modelos mais simples preferíveis quando explicabilidade é essencial"
+5,Q15,reducao_dimensionalidade,T5_Praticas_Ferramentas,"seleção de features, redução de dimensionalidade e limpeza de dados... modelos mais simples preferíveis quando explicabilidade é essencial"
+5,Q15,limpeza_dados,T5_Praticas_Ferramentas,"seleção de features, redução de dimensionalidade e limpeza de dados... modelos mais simples preferíveis quando explicabilidade é essencial"
+5,Q15,trade_off_simplicidade_complexidade,T3_Trade_offs,"seleção de features, redução de dimensionalidade e limpeza de dados... modelos mais simples preferíveis quando explicabilidade é essencial"
+5,Q15,monitoramento_continuo,T5_Praticas_Ferramentas,"seleção de features, redução de dimensionalidade e limpeza de dados... modelos mais simples preferíveis quando explicabilidade é essencial"
+6,Q15,resposta_minima,,.
+7,Q15,trade_off_complexidade_praticidade,T3_Trade_offs,o segredo é encontrar o ponto ideal entre complexidade e praticidade
+8,Q15,contexto_dependente,T1_Contextualismo,cada decisão deve ser baseada no contexto específico do projeto
+9,Q15,sem_resposta_substantiva,,Não sei descrever
+10,Q15,valor_eficiencia,,essenciais para a entrega de valor e resultados eficientes
+11,Q15,sequenciamento_qualidade_legibilidade_pipeline,T4_Hierarquia_qualidade,"foco inicialmente na qualidade dos dados em termos de serem precisos, completos e atuais. Em segundo momento... o usuário do sistema. Finalmente... otimizar o processamento"
+12,Q15,contexto_dominio_medico,T1_Contextualismo,"trabalho com imagens médicas, conciliação entre falta de consistência e atualidade com compreensibilidade, disponibilidade, acessibilidade e principalmente credibilidade"
+12,Q15,trade_off_consistencia_credibilidade,T3_Trade_offs,"trabalho com imagens médicas, conciliação entre falta de consistência e atualidade com compreensibilidade, disponibilidade, acessibilidade e principalmente credibilidade"
+12,Q15,documentacao_processo,,"trabalho com imagens médicas, conciliação entre falta de consistência e atualidade com compreensibilidade, disponibilidade, acessibilidade e principalmente credibilidade"
+13,Q15,hierarquia_precisao_compreensibilidade_eficiencia,T4_Hierarquia_qualidade,"sempre venho dando mais ênfase na precisão dos dados, seguido da compreensibilidade e eficiência... escolha entre dois datasets, um mais robusto que iria demandar muito mais poder computacional"
+13,Q15,trade_off_robustez_capacidade_computacional,T3_Trade_offs,"sempre venho dando mais ênfase na precisão dos dados, seguido da compreensibilidade e eficiência... escolha entre dois datasets, um mais robusto que iria demandar muito mais poder computacional"
+14,Q15,contexto_visao_computacional,T1_Contextualismo,"em visão computacional, dados precisam ser direta e com exatidão... a depender da quantidade, não pode ser muito grande"
+14,Q15,trade_off_volume_eficiencia,T3_Trade_offs,"em visão computacional, dados precisam ser direta e com exatidão... a depender da quantidade, não pode ser muito grande"
+15,Q15,trade_off_completude_confiabilidade,T3_Trade_offs,"as vezes os dados podem não estar completos, mas a confiabilidade pode ser mais alta"
+16,Q15,contexto_dependente,T1_Contextualismo,"varia segundo o objetivo do aprendizado, fontes e métricas dos rótulos"
+17,Q15,problema_orientado,,sempre entender o problema a ser solucionado para dar importância maior para uma característica em detrimento de outras
+17,Q15,trade_off_consistencia_credibilidade,T3_Trade_offs,sempre entender o problema a ser solucionado para dar importância maior para uma característica em detrimento de outras
+18,Q15,impacto_qualidade_resposta_usuario,T2_Garbage_in_out,quando os dados não são consistentes ou incompletos a inferência e resultado final ao cliente pode ser confuso... gastos de infra em todo o fluxo
+18,Q15,custo_retrabalho,T2_Garbage_in_out,quando os dados não são consistentes ou incompletos a inferência e resultado final ao cliente pode ser confuso... gastos de infra em todo o fluxo
+19,Q15,resultado_orientado,,"primeiro o resultado e depois avaliar como ele poderia ser melhorado, revisitando essas características"
+19,Q15,contexto_dependente,T1_Contextualismo,"primeiro o resultado e depois avaliar como ele poderia ser melhorado, revisitando essas características"
+20,Q15,contexto_dominio_medico,T1_Contextualismo,"projeto que trata anamneses de hospitais. Para manter conformidade, abordamos soluções de aprendizado de máquina federado"
+20,Q15,federated_learning,T5_Praticas_Ferramentas,"projeto que trata anamneses de hospitais. Para manter conformidade, abordamos soluções de aprendizado de máquina federado"
+20,Q15,conformidade_local,,"projeto que trata anamneses de hospitais. Para manter conformidade, abordamos soluções de aprendizado de máquina federado"
+21,Q15,papel_ferramentas_plataforma,T5_Praticas_Ferramentas,boas ferramentas de mercado como o databricks ajuda o cientista a focar na solução
+22,Q15,praticas_padronizadas_pilares,T5_Praticas_Ferramentas,"boas práticas para cada pilar como: disponibilidade, segurança, confiabilidade"
+23,Q15,definicao_qualidade_geral,,características que definem a qualidade do dado para ser utilizado
+24,Q15,exploracao_amostra,T5_Praticas_Ferramentas,"depende do problema e do conjunto de dados disponível... padronização, remoção de ruídos"
+24,Q15,limpeza_dados,T5_Praticas_Ferramentas,"depende do problema e do conjunto de dados disponível... padronização, remoção de ruídos"
+24,Q15,contexto_dependente,T1_Contextualismo,"depende do problema e do conjunto de dados disponível... padronização, remoção de ruídos"
+25,Q15,contexto_dominio_medico,T1_Contextualismo,sistemas de análises médicas... imagens clínicas geralmente têm alta resolução pois demandam confiabilidade... grandes volumes impactam eficiência computacional
+25,Q15,trade_off_resolucao_custo_computacional,T3_Trade_offs,sistemas de análises médicas... imagens clínicas geralmente têm alta resolução pois demandam confiabilidade... grandes volumes impactam eficiência computacional
+26,Q15,contexto_dependente_tempo_real,T1_Contextualismo,"se há requisitos de tempo real ou não, se o tempo de espera para a resposta é sensível, pode levar a maior flexibilidade quanto a taxas de acerto"
+26,Q15,flexibilidade_tempo_resposta,,"se há requisitos de tempo real ou não, se o tempo de espera para a resposta é sensível, pode levar a maior flexibilidade quanto a taxas de acerto"
+27,Q15,caracteristicas_essenciais_universais,T4_Hierarquia_qualidade,"Precisão, Completude, Consistência, Credibilidade essenciais não importa a situação... Atualidade prioritária para meteorologia, serviços críticos, bancários"
+27,Q15,caracteristicas_dependentes_aplicacao,T4_Hierarquia_qualidade,"Precisão, Completude, Consistência, Credibilidade essenciais não importa a situação... Atualidade prioritária para meteorologia, serviços críticos, bancários"
+27,Q15,requisitos_para_pesquisa_vs_producao,T4_Hierarquia_qualidade,"Precisão, Completude, Consistência, Credibilidade essenciais não importa a situação... Atualidade prioritária para meteorologia, serviços críticos, bancários"
+27,Q15,importancia_para_produto_vs_dados,T4_Hierarquia_qualidade,"Precisão, Completude, Consistência, Credibilidade essenciais não importa a situação... Atualidade prioritária para meteorologia, serviços críticos, bancários"
+28,Q15,contexto_dominio_biometrico,T1_Contextualismo,sistemas biométricos... etapas de limpezas bem complexas priorizando eficiência e precisão... validação humana após a execução do modelo
+28,Q15,limpeza_complexa,T5_Praticas_Ferramentas,sistemas biométricos... etapas de limpezas bem complexas priorizando eficiência e precisão... validação humana após a execução do modelo
+28,Q15,validacao_humana,T5_Praticas_Ferramentas,sistemas biométricos... etapas de limpezas bem complexas priorizando eficiência e precisão... validação humana após a execução do modelo
+29,Q15,feature_selection,T5_Praticas_Ferramentas,treinamentos com diferentes configurações e tipos de dados... Feature Selection pode ser utilizada
+29,Q15,tuning_iterativo,T5_Praticas_Ferramentas,treinamentos com diferentes configurações e tipos de dados... Feature Selection pode ser utilizada
+30,Q15,contexto_dominio_critico,T1_Contextualismo,"saúde, vida e morte deve considerar apenas dados de boa qualidade... qualquer dado não confiável deve ser eliminado"
+30,Q15,qualidade_imprescindivel_em_critico,T2_Garbage_in_out,"saúde, vida e morte deve considerar apenas dados de boa qualidade... qualquer dado não confiável deve ser eliminado"
+31,Q15,resposta_minima,,.
