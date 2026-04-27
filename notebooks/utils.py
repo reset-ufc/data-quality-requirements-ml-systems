@@ -366,6 +366,33 @@ def cliffs_delta(x, y) -> tuple[float, str]:
     return delta, classify_cliffs_delta(delta)
 
 
+def mcdonald_omega(items: pd.DataFrame, random_state: int = 42) -> float:
+    """McDonald's ω total (1-factor) — alternativa a Cronbach α menos sensível a violações.
+
+    Estima via factor analysis 1-factor sobre itens padronizados; ω = (Σλ)² / ((Σλ)² + Σ(1-λ²)).
+    Retorna NaN se o FA falhar.
+    """
+    import numpy as np
+    from sklearn.decomposition import FactorAnalysis
+    from sklearn.preprocessing import StandardScaler
+
+    data = items.dropna()
+    if len(data) < 5 or data.shape[1] < 3:
+        return float("nan")
+    try:
+        z = StandardScaler().fit_transform(data.to_numpy(dtype=float))
+        fa = FactorAnalysis(n_components=1, random_state=random_state)
+        fa.fit(z)
+        loadings = fa.components_[0]
+        sum_l = loadings.sum()
+        denom = sum_l ** 2 + float(np.sum(1 - loadings ** 2))
+        if denom <= 0:
+            return float("nan")
+        return float(sum_l ** 2 / denom)
+    except Exception:
+        return float("nan")
+
+
 def fisher_or_ci(a: int, b: int, c: int, d: int, confidence: float = 0.95) -> dict:
     """Fisher's exact (two-sided) + odds ratio com IC 95% Wald (log-OR).
 
