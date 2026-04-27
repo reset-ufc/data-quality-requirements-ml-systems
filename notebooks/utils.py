@@ -365,13 +365,67 @@ def cliffs_delta(x, y) -> tuple[float, str]:
     greater = sum((xi > yi) for xi in x for yi in y)
     less = sum((xi < yi) for xi in x for yi in y)
     delta = (greater - less) / (len(x) * len(y))
+    return float(delta), classify_cliffs_delta(delta)
+
+
+def classify_cliffs_delta(delta: float) -> str:
+    """Classificação Romano et al. (2006) para |delta|."""
     a = abs(delta)
+    if a != a:  # NaN
+        return "undefined"
     if a < 0.147:
+        return "negligible"
+    if a < 0.33:
+        return "small"
+    if a < 0.474:
+        return "medium"
+    return "large"
+
+
+# ---------------------------------------------------------------------------
+# Paired tests (Wilcoxon signed-rank + matched-pairs rank-biserial)
+# ---------------------------------------------------------------------------
+def wilcoxon_paired(g1, g2) -> dict:
+    """Wilcoxon signed-rank pareado + matched-pairs rank-biserial r (Kerby 2014).
+
+    H0: distribuição de g1 - g2 é simétrica em torno de zero.
+    Effect size: r_rb = (W_pos - W_neg) / (W_pos + W_neg) ∈ [-1, 1].
+    Classificação aproximada: |r| < 0.1 negligible, < 0.3 small, < 0.5 medium, ≥ 0.5 large.
+    """
+    import numpy as np
+    from scipy import stats as sp_stats
+
+    a = pd.Series(g1).reset_index(drop=True)
+    b = pd.Series(g2).reset_index(drop=True)
+    paired = pd.concat([a, b], axis=1).dropna()
+    n = len(paired)
+    if n < 5:
+        return {"W": float("nan"), "p": float("nan"), "r_rb": float("nan"),
+                "n": n, "magnitude": "insufficient", "med_diff": float("nan")}
+
+    diffs = (paired.iloc[:, 0] - paired.iloc[:, 1]).to_numpy()
+    nonzero = diffs[diffs != 0]
+    if len(nonzero) == 0:
+        return {"W": float("nan"), "p": 1.0, "r_rb": 0.0,
+                "n": n, "magnitude": "negligible", "med_diff": 0.0}
+
+    ranks = sp_stats.rankdata(np.abs(nonzero))
+    w_pos = float(ranks[nonzero > 0].sum())
+    w_neg = float(ranks[nonzero < 0].sum())
+    r_rb = (w_pos - w_neg) / (w_pos + w_neg) if (w_pos + w_neg) > 0 else 0.0
+
+    res = sp_stats.wilcoxon(paired.iloc[:, 0], paired.iloc[:, 1],
+                            zero_method="wilcox", alternative="two-sided")
+
+    ar = abs(r_rb)
+    if ar < 0.1:
         magnitude = "negligible"
-    elif a < 0.33:
+    elif ar < 0.3:
         magnitude = "small"
-    elif a < 0.474:
+    elif ar < 0.5:
         magnitude = "medium"
     else:
         magnitude = "large"
-    return float(delta), magnitude
+
+    return {"W": float(res.statistic), "p": float(res.pvalue), "r_rb": float(r_rb),
+            "n": n, "magnitude": magnitude, "med_diff": float(pd.Series(diffs).median())}
