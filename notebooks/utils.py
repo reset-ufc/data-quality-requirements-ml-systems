@@ -366,6 +366,44 @@ def cliffs_delta(x, y) -> tuple[float, str]:
     return delta, classify_cliffs_delta(delta)
 
 
+def fisher_or_ci(a: int, b: int, c: int, d: int, confidence: float = 0.95) -> dict:
+    """Fisher's exact (two-sided) + odds ratio com IC 95% Wald (log-OR).
+
+    Tabela 2×2:
+                 grupo 1   grupo 2
+        evento     a         b
+        não-ev     c         d
+
+    OR = (a*d) / (b*c). Continuity correction (+0.5) aplicada quando há células zero.
+    """
+    import numpy as np
+    from scipy.stats import fisher_exact, norm
+
+    table = [[a, b], [c, d]]
+    res = fisher_exact(table, alternative="two-sided")
+    p_value = float(res.pvalue)
+
+    # OR + CI Wald em log-OR
+    ac, bc, cc, dc = a, b, c, d
+    if min(a, b, c, d) == 0:
+        ac, bc, cc, dc = a + 0.5, b + 0.5, c + 0.5, d + 0.5
+    or_point = (ac * dc) / (bc * cc) if (bc * cc) > 0 else float("nan")
+    if np.isfinite(or_point) and or_point > 0:
+        log_or = np.log(or_point)
+        se = np.sqrt(1 / ac + 1 / bc + 1 / cc + 1 / dc)
+        z = norm.ppf(1 - (1 - confidence) / 2)
+        or_lo = float(np.exp(log_or - z * se))
+        or_hi = float(np.exp(log_or + z * se))
+    else:
+        or_lo = float("nan")
+        or_hi = float("nan")
+
+    return {"p": p_value, "or": float(or_point), "or_lo": or_lo, "or_hi": or_hi,
+            "n1": int(a + c), "n2": int(b + d),
+            "p1": float(a / (a + c)) if (a + c) > 0 else float("nan"),
+            "p2": float(b / (b + d)) if (b + d) > 0 else float("nan")}
+
+
 def cliffs_delta_with_ci(x, y, n_resamples: int = 10_000, confidence: float = 0.95,
                          random_state: int = 42) -> dict:
     """Cliff's δ + IC bootstrap (BCa com fallback para percentile).
