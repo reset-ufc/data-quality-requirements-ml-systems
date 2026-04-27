@@ -362,10 +362,81 @@ def cliffs_delta(x, y) -> tuple[float, str]:
     y = y[~np.isnan(y)]
     if len(x) == 0 or len(y) == 0:
         return (float("nan"), "undefined")
-    greater = sum((xi > yi) for xi in x for yi in y)
-    less = sum((xi < yi) for xi in x for yi in y)
-    delta = (greater - less) / (len(x) * len(y))
-    return float(delta), classify_cliffs_delta(delta)
+    delta = float(np.sign(x[:, None] - y[None, :]).mean())
+    return delta, classify_cliffs_delta(delta)
+
+
+def cliffs_delta_with_ci(x, y, n_resamples: int = 10_000, confidence: float = 0.95,
+                         random_state: int = 42) -> dict:
+    """Cliff's δ + IC bootstrap (BCa com fallback para percentile).
+
+    Bootstrap independente em cada amostra (não pareado): consistente com a hipótese
+    de duas amostras independentes do MWU.
+    """
+    import numpy as np
+    x = np.asarray(x, dtype=float)
+    y = np.asarray(y, dtype=float)
+    x = x[~np.isnan(x)]
+    y = y[~np.isnan(y)]
+    n_x = len(x)
+    n_y = len(y)
+    if n_x < 3 or n_y < 3:
+        return {"delta": float("nan"), "ci_lo": float("nan"), "ci_hi": float("nan"),
+                "magnitude": "insufficient", "n_x": n_x, "n_y": n_y, "method": "insufficient"}
+
+    delta = float(np.sign(x[:, None] - y[None, :]).mean())
+    rng = np.random.default_rng(random_state)
+    idx_x = rng.integers(0, n_x, size=(n_resamples, n_x))
+    idx_y = rng.integers(0, n_y, size=(n_resamples, n_y))
+    bx = x[idx_x]
+    by = y[idx_y]
+    samples = np.sign(bx[:, :, None] - by[:, None, :]).mean(axis=(1, 2))
+    finite = samples[np.isfinite(samples)]
+    if len(finite) < 100:
+        return {"delta": delta, "ci_lo": float("nan"), "ci_hi": float("nan"),
+                "magnitude": classify_cliffs_delta(delta),
+                "n_x": n_x, "n_y": n_y, "method": "failed"}
+
+    alpha = (1 - confidence) / 2
+    z0 = sp_stats_norm_ppf(np.mean(samples < delta))
+    use_percentile = not np.isfinite(z0)
+
+    if not use_percentile:
+        # Jackknife sobre amostras concatenadas com label de origem
+        labels = np.concatenate([np.zeros(n_x, dtype=int), np.ones(n_y, dtype=int)])
+        pool = np.concatenate([x, y])
+        n_total = n_x + n_y
+        jk = np.empty(n_total, dtype=float)
+        for i in range(n_total):
+            sel = np.delete(np.arange(n_total), i)
+            xs = pool[sel][labels[sel] == 0]
+            ys = pool[sel][labels[sel] == 1]
+            if len(xs) == 0 or len(ys) == 0:
+                jk[i] = np.nan
+            else:
+                jk[i] = float(np.sign(xs[:, None] - ys[None, :]).mean())
+        jk_finite = jk[np.isfinite(jk)]
+        if len(jk_finite) >= 5:
+            jk_mean = jk_finite.mean()
+            num = np.sum((jk_mean - jk_finite) ** 3)
+            den = 6.0 * (np.sum((jk_mean - jk_finite) ** 2) ** 1.5)
+            if den != 0:
+                a_acc = num / den
+                z_lo = sp_stats_norm_ppf(alpha)
+                z_hi = sp_stats_norm_ppf(1 - alpha)
+                p_lo = sp_stats_norm_cdf(z0 + (z0 + z_lo) / (1 - a_acc * (z0 + z_lo)))
+                p_hi = sp_stats_norm_cdf(z0 + (z0 + z_hi) / (1 - a_acc * (z0 + z_hi)))
+                if np.isfinite(p_lo) and np.isfinite(p_hi):
+                    lo = float(np.quantile(finite, np.clip(p_lo, 0.001, 0.999)))
+                    hi = float(np.quantile(finite, np.clip(p_hi, 0.001, 0.999)))
+                    return {"delta": delta, "ci_lo": lo, "ci_hi": hi,
+                            "magnitude": classify_cliffs_delta(delta),
+                            "n_x": n_x, "n_y": n_y, "method": "bca"}
+    lo = float(np.quantile(finite, alpha))
+    hi = float(np.quantile(finite, 1 - alpha))
+    return {"delta": delta, "ci_lo": lo, "ci_hi": hi,
+            "magnitude": classify_cliffs_delta(delta),
+            "n_x": n_x, "n_y": n_y, "method": "percentile"}
 
 
 def classify_cliffs_delta(delta: float) -> str:
