@@ -429,3 +429,203 @@ def wilcoxon_paired(g1, g2) -> dict:
 
     return {"W": float(res.statistic), "p": float(res.pvalue), "r_rb": float(r_rb),
             "n": n, "magnitude": magnitude, "med_diff": float(pd.Series(diffs).median())}
+
+
+# ---------------------------------------------------------------------------
+# Bootstrap CIs (BCa com fallback para percentile)
+# ---------------------------------------------------------------------------
+def _paired_bootstrap_indices(n: int, n_resamples: int, rng) -> "np.ndarray":
+    """Gera matriz (n_resamples × n) de índices amostrados com reposição."""
+    import numpy as np
+    return rng.integers(0, n, size=(n_resamples, n))
+
+
+def paired_bootstrap_ci(stat_fn, *arrays, n_resamples: int = 10_000,
+                        confidence: float = 0.95, random_state: int = 42,
+                        method: str = "bca") -> tuple[float, float, str]:
+    """Bootstrap pareado tolerante a NaN.
+
+    `stat_fn(*arrays)` deve retornar um escalar (ou np.nan). Resamples que produzam NaN
+    são descartados antes do percentil. Métodos: "bca" (com fallback para "percentile" se
+    o jackknife for degenerado) ou "percentile".
+    """
+    import numpy as np
+    rng = np.random.default_rng(random_state)
+    arrays = [np.asarray(a) for a in arrays]
+    n = len(arrays[0])
+    if any(len(a) != n for a in arrays):
+        raise ValueError("paired_bootstrap_ci requer arrays do mesmo tamanho")
+
+    idxs = _paired_bootstrap_indices(n, n_resamples, rng)
+    samples = np.empty(n_resamples, dtype=float)
+    for i in range(n_resamples):
+        ix = idxs[i]
+        try:
+            samples[i] = float(stat_fn(*[a[ix] for a in arrays]))
+        except Exception:
+            samples[i] = np.nan
+    finite = samples[np.isfinite(samples)]
+    if len(finite) < 100:
+        return float("nan"), float("nan"), "failed"
+
+    alpha = (1 - confidence) / 2
+    if method == "percentile":
+        lo = float(np.quantile(finite, alpha))
+        hi = float(np.quantile(finite, 1 - alpha))
+        return lo, hi, "percentile"
+
+    # BCa
+    point = stat_fn(*arrays)
+    if not np.isfinite(point):
+        return float("nan"), float("nan"), "failed"
+    z0 = sp_stats_norm_ppf(np.mean(samples < point))
+    if not np.isfinite(z0):
+        lo = float(np.quantile(finite, alpha))
+        hi = float(np.quantile(finite, 1 - alpha))
+        return lo, hi, "percentile"
+
+    jk = np.empty(n, dtype=float)
+    for i in range(n):
+        sel = np.delete(np.arange(n), i)
+        try:
+            jk[i] = float(stat_fn(*[a[sel] for a in arrays]))
+        except Exception:
+            jk[i] = np.nan
+    jk_finite = jk[np.isfinite(jk)]
+    if len(jk_finite) < 5:
+        lo = float(np.quantile(finite, alpha))
+        hi = float(np.quantile(finite, 1 - alpha))
+        return lo, hi, "percentile"
+    jk_mean = jk_finite.mean()
+    num = np.sum((jk_mean - jk_finite) ** 3)
+    den = 6.0 * (np.sum((jk_mean - jk_finite) ** 2) ** 1.5)
+    if den == 0:
+        lo = float(np.quantile(finite, alpha))
+        hi = float(np.quantile(finite, 1 - alpha))
+        return lo, hi, "percentile"
+    a_acc = num / den
+
+    z_alpha_lo = sp_stats_norm_ppf(alpha)
+    z_alpha_hi = sp_stats_norm_ppf(1 - alpha)
+    p_lo = sp_stats_norm_cdf(z0 + (z0 + z_alpha_lo) / (1 - a_acc * (z0 + z_alpha_lo)))
+    p_hi = sp_stats_norm_cdf(z0 + (z0 + z_alpha_hi) / (1 - a_acc * (z0 + z_alpha_hi)))
+    if not (np.isfinite(p_lo) and np.isfinite(p_hi)):
+        lo = float(np.quantile(finite, alpha))
+        hi = float(np.quantile(finite, 1 - alpha))
+        return lo, hi, "percentile"
+    lo = float(np.quantile(samples[np.isfinite(samples)], np.clip(p_lo, 0.001, 0.999)))
+    hi = float(np.quantile(samples[np.isfinite(samples)], np.clip(p_hi, 0.001, 0.999)))
+    return lo, hi, "bca"
+
+
+def sp_stats_norm_ppf(p):
+    from scipy.stats import norm
+    return norm.ppf(p)
+
+
+def sp_stats_norm_cdf(z):
+    from scipy.stats import norm
+    return norm.cdf(z)
+
+
+def _vectorized_spearman_resamples(x, y, n_resamples: int, rng) -> "np.ndarray":
+    """Calcula ρ de Spearman em n_resamples bootstrap samples vetorizadamente.
+
+    Re-rankeia cada resample (correto sob ties); ~100× mais rápido que loop python.
+    """
+    import numpy as np
+    from scipy.stats import rankdata
+    n = len(x)
+    idx = rng.integers(0, n, size=(n_resamples, n))
+    bx = x[idx]
+    by = y[idx]
+    rx = rankdata(bx, axis=1)
+    ry = rankdata(by, axis=1)
+    rxc = rx - rx.mean(axis=1, keepdims=True)
+    ryc = ry - ry.mean(axis=1, keepdims=True)
+    num = (rxc * ryc).sum(axis=1)
+    den_x = (rxc ** 2).sum(axis=1)
+    den_y = (ryc ** 2).sum(axis=1)
+    with np.errstate(invalid="ignore", divide="ignore"):
+        rhos = num / np.sqrt(den_x * den_y)
+    return rhos
+
+
+def spearman_with_ci(x, y, n_resamples: int = 10_000, confidence: float = 0.95,
+                     random_state: int = 42) -> dict:
+    """Spearman ρ + IC bootstrap pareado (BCa com fallback para percentile).
+
+    Bootstrap vetorizado (rápido). NaN handling: resamples degenerados (variância 0
+    em x ou y após resample) são descartados antes do quantil.
+    """
+    import numpy as np
+    from scipy import stats as sp_stats
+
+    a = pd.Series(x).reset_index(drop=True)
+    b = pd.Series(y).reset_index(drop=True)
+    paired = pd.concat([a, b], axis=1).dropna()
+    n = len(paired)
+    if n < 5:
+        return {"rho": float("nan"), "p": float("nan"),
+                "ci_lo": float("nan"), "ci_hi": float("nan"),
+                "n": n, "method": "insufficient"}
+    xv = paired.iloc[:, 0].to_numpy(dtype=float)
+    yv = paired.iloc[:, 1].to_numpy(dtype=float)
+    rho, p = sp_stats.spearmanr(xv, yv)
+    if not np.isfinite(rho):
+        return {"rho": float("nan"), "p": float("nan"),
+                "ci_lo": float("nan"), "ci_hi": float("nan"),
+                "n": n, "method": "degenerate"}
+
+    rng = np.random.default_rng(random_state)
+    samples = _vectorized_spearman_resamples(xv, yv, n_resamples, rng)
+    finite = samples[np.isfinite(samples)]
+    if len(finite) < 100:
+        return {"rho": float(rho), "p": float(p),
+                "ci_lo": float("nan"), "ci_hi": float("nan"),
+                "n": n, "method": "failed"}
+
+    alpha = (1 - confidence) / 2
+    # BCa: bias z0 + acceleration via jackknife
+    z0 = sp_stats_norm_ppf(np.mean(samples < rho))
+    if not np.isfinite(z0):
+        lo = float(np.quantile(finite, alpha))
+        hi = float(np.quantile(finite, 1 - alpha))
+        return {"rho": float(rho), "p": float(p),
+                "ci_lo": lo, "ci_hi": hi, "n": n, "method": "percentile"}
+
+    jk = np.empty(n, dtype=float)
+    for i in range(n):
+        sel = np.delete(np.arange(n), i)
+        with np.errstate(invalid="ignore", divide="ignore"):
+            r = sp_stats.spearmanr(xv[sel], yv[sel]).statistic
+        jk[i] = float(r) if np.isfinite(r) else np.nan
+    jk_finite = jk[np.isfinite(jk)]
+    if len(jk_finite) < 5:
+        lo = float(np.quantile(finite, alpha))
+        hi = float(np.quantile(finite, 1 - alpha))
+        return {"rho": float(rho), "p": float(p),
+                "ci_lo": lo, "ci_hi": hi, "n": n, "method": "percentile"}
+    jk_mean = jk_finite.mean()
+    num = np.sum((jk_mean - jk_finite) ** 3)
+    den = 6.0 * (np.sum((jk_mean - jk_finite) ** 2) ** 1.5)
+    if den == 0:
+        lo = float(np.quantile(finite, alpha))
+        hi = float(np.quantile(finite, 1 - alpha))
+        return {"rho": float(rho), "p": float(p),
+                "ci_lo": lo, "ci_hi": hi, "n": n, "method": "percentile"}
+    a_acc = num / den
+
+    z_lo = sp_stats_norm_ppf(alpha)
+    z_hi = sp_stats_norm_ppf(1 - alpha)
+    p_lo = sp_stats_norm_cdf(z0 + (z0 + z_lo) / (1 - a_acc * (z0 + z_lo)))
+    p_hi = sp_stats_norm_cdf(z0 + (z0 + z_hi) / (1 - a_acc * (z0 + z_hi)))
+    if not (np.isfinite(p_lo) and np.isfinite(p_hi)):
+        lo = float(np.quantile(finite, alpha))
+        hi = float(np.quantile(finite, 1 - alpha))
+        return {"rho": float(rho), "p": float(p),
+                "ci_lo": lo, "ci_hi": hi, "n": n, "method": "percentile"}
+    lo = float(np.quantile(finite, np.clip(p_lo, 0.001, 0.999)))
+    hi = float(np.quantile(finite, np.clip(p_hi, 0.001, 0.999)))
+    return {"rho": float(rho), "p": float(p),
+            "ci_lo": lo, "ci_hi": hi, "n": n, "method": "bca"}
