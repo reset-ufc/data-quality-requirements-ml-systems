@@ -307,6 +307,17 @@ EDUCATION_NORM = {
     "Specialization": "specialization",
 }
 
+EDUCATION_ORDINAL = {
+    "high_school": 1,
+    "undergraduate": 2,
+    "higher_education": 3,
+    "ms_student": 4,
+    "master": 5,
+    "phd_student": 6,
+    "doctorate": 7,
+    "specialization": 8,
+}
+
 STATE_TO_UF: dict[str, str] = {
     "Acre": "AC", "Alagoas": "AL", "Amapá": "AP", "Amazonas": "AM",
     "Bahia": "BA", "Ceará": "CE", "Distrito Federal": "DF", "Espírito Santo": "ES",
