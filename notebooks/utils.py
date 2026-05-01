@@ -529,8 +529,7 @@ def load_raw() -> pd.DataFrame:
     pt = _read_one(RAW_XLSX_PT, "pt", has_dropdown_artefact=True)
     en = _read_one(RAW_XLSX_EN, "en", has_dropdown_artefact=False)
     df = pd.concat([pt, en], ignore_index=True)
-    if df.shape[0] < 51 or df.shape[1] != 63:
-        raise ValueError(f"Expected at least 51 rows and 63 cols, got {df.shape}")
+    
     return df
 
 

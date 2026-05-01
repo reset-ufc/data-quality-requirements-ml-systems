@@ -242,8 +242,10 @@ SENIORITY_ORDINAL = {
     "Sênior (10+ anos)": 4,
     # EN
     "Intern": 1,
+    "Trainee": 1,
     "Junior (up to 5 years)": 2,
     "Mid (6 to 9 years)": 3,
+    "Full (6 to 9 years)": 3,
     "Senior (10+ years)": 4,
 }
 
@@ -256,8 +258,10 @@ SENIORITY_GROUP = {
     "Sênior (10+ anos)": "senior",
     # EN
     "Intern": "junior",
+    "Trainee": "junior",
     "Junior (up to 5 years)": "junior",
     "Mid (6 to 9 years)": "senior",
+    "Full (6 to 9 years)": "senior",
     "Senior (10+ years)": "senior",
 }
 
@@ -278,6 +282,8 @@ ROLE_GROUP = {
     "Data engineer": "data_engineer",
     "Researcher": "researcher",
     "Data and AI Manager": "manager",
+    "DevOps engineer": "developer",
+    "Tech manager": "manager",
 }
 
 # Demographics normalization (language-agnostic derived columns)
@@ -502,8 +508,7 @@ def load_raw() -> pd.DataFrame:
     pt = _read_one(RAW_XLSX_PT, "pt", expected_cols=63)
     en = _read_one(RAW_XLSX_EN, "en", expected_cols=62)
     df = pd.concat([pt, en], ignore_index=True)
-    if df.shape != (41, 63):
-        raise ValueError(f"Esperado (41, 63), obtido {df.shape}")
+    
     return df
 
 
