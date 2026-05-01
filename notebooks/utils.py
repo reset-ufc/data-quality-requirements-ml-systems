@@ -290,7 +290,6 @@ ROLE_GROUP = {
     "Desenvolvedor de Software (Backend, front-end, fullstack)": "Developer",
     "Engenheiro de Machine Learning": "ML Engineer",
     "Engenheiro de dados": "Data Engineer",
-    "Product owner": "Other",
     "Gerente de Dados e IA": "Manager",
     "Pesquisador e Desenvolvedor Fullstack": "Developer",
     "Pesquisador": "Researcher",
@@ -303,15 +302,8 @@ ROLE_GROUP = {
     "DevOps engineer": "DevOps Engineer",
     "Researcher": "Researcher",
     "Data and AI Manager": "Manager",
-    "Tech manager": "Manager",
-    "Data scientist": "data_scientist",
-    "Software Developer (Backend, front-end, fullstack)": "developer",
-    "Machine Learning Engineer": "ml_engineer",
-    "Data engineer": "data_engineer",
-    "Researcher": "researcher",
-    "Data and AI Manager": "manager",
-    "DevOps engineer": "developer",
-    "Tech manager": "manager",                              
+    "Tech manager": "Manager",         
+    "Product owner": "Other",
 }
 
 # Demographics normalization (language-agnostic derived columns)
@@ -507,6 +499,29 @@ def setup_matplotlib() -> None:
         "grid.linestyle": "--",
         "axes.axisbelow": True,
     })
+
+
+def save_latex(df: pd.DataFrame, name: str, caption: str = "", label: str = "", **kwargs) -> Path:
+    """Save a DataFrame as a LaTeX booktabs table in the tables folder."""
+    out = DATA_PROC / "tables" / f"{name}.tex"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    index = kwargs.pop("index", False)
+    kwargs.pop("booktabs", None)
+    kwargs.pop("escape", None)
+    styler = df.style.hide(axis="index") if not index else df.style
+    tex = styler.to_latex(hrules=True, **kwargs)
+    if caption or label:
+        wrap = "\\begin{table}[t]\n"
+        if caption:
+            wrap += f"  \\caption{{{caption}}}\n"
+        if label:
+            wrap += f"  \\label{{{label}}}\n"
+        wrap += "  \\centering\n  \\small\n"
+        wrap += tex
+        wrap += "\\end{table}\n"
+        tex = wrap
+    out.write_text(tex, encoding="utf-8")
+    return out
 
 
 def save_fig(fig, name: str) -> Path:
