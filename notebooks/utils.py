@@ -285,7 +285,7 @@ ROLE_GROUP = {
     "Desenvolvedor de Software (Backend, front-end, fullstack)": "Developer",
     "Engenheiro de Machine Learning": "ML Engineer",
     "Engenheiro de dados": "Data Engineer",
-    "Gerente de Dados e IA": "Manager",
+    "Gerente de Dados e IA": "Data and AI Manager",
     "Pesquisador e Desenvolvedor Fullstack": "Developer",
     "Pesquisador": "Researcher",
     "Especialista": "Other",
@@ -296,9 +296,9 @@ ROLE_GROUP = {
     "Data engineer": "Data Engineer",
     "DevOps engineer": "DevOps Engineer",
     "Researcher": "Researcher",
-    "Data and AI Manager": "Manager",
-    "Tech manager": "Manager",         
-    "Product owner": "Other",
+    "Data and AI Manager": "Data and AI Manager",
+    "Tech manager": "Tech manager",         
+    "Product owner": "Product owner",
 }
 
 # Demographics normalization (language-agnostic derived columns)
