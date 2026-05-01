@@ -244,7 +244,6 @@ SENIORITY_ORDINAL = {
 
 SENIORITY_NORM = {
     # PT raw labels
-<<<<<<< HEAD
     "Estagiário":             "Intern",
     "Júnior (até 5 anos)":    "Junior (up to 5 years)",
     "Pleno (6 a 9 anos)":     "Mid-level (6 to 9 years)",
@@ -256,7 +255,6 @@ SENIORITY_NORM = {
     "Mid (6 to 9 years)":     "Mid-level (6 to 9 years)",
     "Full (6 to 9 years)":    "Mid-level (6 to 9 years)",
     "Senior (10+ years)":     "Senior (10+ years)",
-=======
     "Estagiário": "intern",
     "Júnior (até 5 anos)": "junior",
     "Pleno (6 a 9 anos)": "mid",
@@ -268,7 +266,6 @@ SENIORITY_NORM = {
     "Mid (6 to 9 years)": "mid",
     "Full (6 to 9 years)": "mid",
     "Senior (10+ years)": "senior",
->>>>>>> 15aad1b05be71673445e2db631aff0f6345460b7
 }
 
 # Senior (>= mid) vs Junior
@@ -299,7 +296,6 @@ ROLE_GROUP = {
     "Pesquisador": "Researcher",
     "Especialista": "Other",
     # EN raw labels
-<<<<<<< HEAD
     "Data scientist": "Data Scientist",
     "Software Developer (Backend, front-end, fullstack)": "Developer",
     "Machine Learning Engineer": "ML Engineer",
@@ -308,7 +304,6 @@ ROLE_GROUP = {
     "Researcher": "Researcher",
     "Data and AI Manager": "Manager",
     "Tech manager": "Manager",
-=======
     "Data scientist": "data_scientist",
     "Software Developer (Backend, front-end, fullstack)": "developer",
     "Machine Learning Engineer": "ml_engineer",
@@ -316,8 +311,7 @@ ROLE_GROUP = {
     "Researcher": "researcher",
     "Data and AI Manager": "manager",
     "DevOps engineer": "developer",
-    "Tech manager": "manager",
->>>>>>> 15aad1b05be71673445e2db631aff0f6345460b7
+    "Tech manager": "manager",                              
 }
 
 # Demographics normalization (language-agnostic derived columns)
@@ -553,19 +547,11 @@ def _read_one(path: Path, language: str, has_dropdown_artefact: bool) -> pd.Data
 
 def load_raw() -> pd.DataFrame:
     """Concatenate the PT (national) and EN (international) forms into a single frame.
-<<<<<<< HEAD
-=======
-
     Output: N × 63 (62 original cols + `language`).
->>>>>>> 15aad1b05be71673445e2db631aff0f6345460b7
     """
     pt = _read_one(RAW_XLSX_PT, "pt", has_dropdown_artefact=True)
     en = _read_one(RAW_XLSX_EN, "en", has_dropdown_artefact=False)
     df = pd.concat([pt, en], ignore_index=True)
-<<<<<<< HEAD
-=======
-    
->>>>>>> 15aad1b05be71673445e2db631aff0f6345460b7
     return df
 
 
