@@ -211,11 +211,13 @@ DISCUSSION_FREQ_MAP = {
 
 SUPPORT_FREQ_MAP = {
     # PT raw labels
+    "Nunca": 0,
     "Raramente": 1,
     "Ocasionalmente": 2,
     "Frequentemente": 3,
     "Sempre": 4,
     # EN raw labels
+    "Never": 0,
     "Rarely": 1,
     "Occasionally": 2,
     "Often": 3,
@@ -233,9 +235,26 @@ SENIORITY_ORDINAL = {
     "Sênior (10+ anos)": 4,
     # EN raw labels
     "Intern": 1,
+    "Trainee": 1,
     "Junior (up to 5 years)": 2,
     "Mid (6 to 9 years)": 3,
+    "Full (6 to 9 years)": 3,
     "Senior (10+ years)": 4,
+}
+
+SENIORITY_NORM = {
+    # PT raw labels
+    "Estagiário": "intern",
+    "Júnior (até 5 anos)": "junior",
+    "Pleno (6 a 9 anos)": "mid",
+    "Sênior (10+ anos)": "senior",
+    # EN raw labels
+    "Intern": "intern",
+    "Trainee": "intern",
+    "Junior (up to 5 years)": "junior",
+    "Mid (6 to 9 years)": "mid",
+    "Full (6 to 9 years)": "mid",
+    "Senior (10+ years)": "senior",
 }
 
 # Senior (>= mid) vs Junior
@@ -247,8 +266,10 @@ SENIORITY_GROUP = {
     "Sênior (10+ anos)": "senior",
     # EN raw labels
     "Intern": "junior",
+    "Trainee": "junior",
     "Junior (up to 5 years)": "junior",
     "Mid (6 to 9 years)": "senior",
+    "Full (6 to 9 years)": "senior",
     "Senior (10+ years)": "senior",
 }
 
@@ -269,6 +290,8 @@ ROLE_GROUP = {
     "Data engineer": "data_engineer",
     "Researcher": "researcher",
     "Data and AI Manager": "manager",
+    "DevOps engineer": "developer",
+    "Tech manager": "manager",
 }
 
 # Demographics normalization (language-agnostic derived columns)
@@ -501,14 +524,13 @@ def _read_one(path: Path, language: str, has_dropdown_artefact: bool) -> pd.Data
 def load_raw() -> pd.DataFrame:
     """Concatenate the PT (national) and EN (international) forms into a single frame.
 
-    Raw PT: 32 × 63 (extra `@dropdown` column dropped). Raw EN: 9 × 62.
-    Output: 41 × 63 (62 original cols + `language`).
+    Output: N × 63 (62 original cols + `language`).
     """
     pt = _read_one(RAW_XLSX_PT, "pt", has_dropdown_artefact=True)
     en = _read_one(RAW_XLSX_EN, "en", has_dropdown_artefact=False)
     df = pd.concat([pt, en], ignore_index=True)
-    if df.shape != (41, 63):
-        raise ValueError(f"Expected (41, 63), got {df.shape}")
+    if df.shape[0] < 51 or df.shape[1] != 63:
+        raise ValueError(f"Expected at least 51 rows and 63 cols, got {df.shape}")
     return df
 
 
