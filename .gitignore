@@ -229,6 +229,8 @@ data/**
 !data/raw/
 !data/**/.gitkeep
 data/raw/**
+!data/raw/survey_responses.xlsx
+!data/raw/survey_responses_2.xlsx
 
 # Figures are generated outputs; keep only placeholders in version control.
 figures/**

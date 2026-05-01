@@ -1,7 +1,7 @@
 # Codebook — Data Quality Requirements in ML Survey
 
-**N**: 41 respondents (32 from PT-BR form + 9 from EN international form)
-**Collection window**: 2025-02-14 → 2025-03-15
+**N**: 51 respondents (32 from PT-BR form + 19 from EN international form)
+**Collection window**: 2025-02-14 → 2026-04-30
 
 > Free-text responses and demographic categoricals are kept in their original language (PT or EN). For cross-language analyses use the derived columns: `gender_norm`, `age_band`, `education_norm`, `seniority_group`, `role_group`. Likert items (Q8/Q11/Q13/Q19/Q22) are mapped to identical ordinal scales across both subsets via bilingual lookup tables in `notebooks/utils.py`.
 
@@ -81,7 +81,7 @@
 
 ## Anonymization
 
-- Email column (Q23): dropped from both forms. 20 respondents provided an email overall. Not redistributed.
+- Email column (Q23): dropped from both forms. 22 respondents provided an email overall. Not redistributed.
 - `@dropdown` column: empty Google Forms artefact (PT only). Removed in `load_raw`.
 - `country` × `state`: Brazilian respondents normalized to 2-letter UF codes; non-BR respondents (Germany, France, Colombia) keep `country` only with `region='International'` — no identification beyond country level.
 - Open responses: regex sweep for emails and proper-name candidates. No personal identifier was found. See cell 7 of notebook 01 for the procedure.

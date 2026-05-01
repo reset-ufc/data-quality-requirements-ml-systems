@@ -211,11 +211,13 @@ DISCUSSION_FREQ_MAP = {
 
 SUPPORT_FREQ_MAP = {
     # PT raw labels
+    "Nunca": 0,
     "Raramente": 1,
     "Ocasionalmente": 2,
     "Frequentemente": 3,
     "Sempre": 4,
     # EN raw labels
+    "Never": 0,
     "Rarely": 1,
     "Occasionally": 2,
     "Often": 3,
@@ -233,9 +235,37 @@ SENIORITY_ORDINAL = {
     "Sênior (10+ anos)": 4,
     # EN raw labels
     "Intern": 1,
+    "Trainee": 1,
     "Junior (up to 5 years)": 2,
     "Mid (6 to 9 years)": 3,
+    "Full (6 to 9 years)": 3,
     "Senior (10+ years)": 4,
+}
+
+SENIORITY_NORM = {
+    # PT raw labels
+    "Estagiário":             "Intern",
+    "Júnior (até 5 anos)":    "Junior (up to 5 years)",
+    "Pleno (6 a 9 anos)":     "Mid-level (6 to 9 years)",
+    "Sênior (10+ anos)":      "Senior (10+ years)",
+    # EN raw labels
+    "Intern":                 "Intern",
+    "Trainee":                "Intern",
+    "Junior (up to 5 years)": "Junior (up to 5 years)",
+    "Mid (6 to 9 years)":     "Mid-level (6 to 9 years)",
+    "Full (6 to 9 years)":    "Mid-level (6 to 9 years)",
+    "Senior (10+ years)":     "Senior (10+ years)",
+    "Estagiário": "intern",
+    "Júnior (até 5 anos)": "junior",
+    "Pleno (6 a 9 anos)": "mid",
+    "Sênior (10+ anos)": "senior",
+    # EN raw labels
+    "Intern": "intern",
+    "Trainee": "intern",
+    "Junior (up to 5 years)": "junior",
+    "Mid (6 to 9 years)": "mid",
+    "Full (6 to 9 years)": "mid",
+    "Senior (10+ years)": "senior",
 }
 
 # Senior (>= mid) vs Junior
@@ -247,28 +277,33 @@ SENIORITY_GROUP = {
     "Sênior (10+ anos)": "senior",
     # EN raw labels
     "Intern": "junior",
+    "Trainee": "junior",
     "Junior (up to 5 years)": "junior",
     "Mid (6 to 9 years)": "senior",
+    "Full (6 to 9 years)": "senior",
     "Senior (10+ years)": "senior",
 }
 
 ROLE_GROUP = {
     # PT raw labels
-    "Cientista de dados": "data_scientist",
-    "Desenvolvedor de Software (Backend, front-end, fullstack)": "developer",
-    "Engenheiro de Machine Learning": "ml_engineer",
-    "Engenheiro de dados": "data_engineer",
-    "Product owner": "other",
-    "Gerente de Dados e IA": "manager",
-    "Pesquisador e Desenvolvedor Fullstack": "developer",
-    "Pesquisador": "researcher",
+    "Cientista de dados": "Data Scientist",
+    "Desenvolvedor de Software (Backend, front-end, fullstack)": "Developer",
+    "Engenheiro de Machine Learning": "ML Engineer",
+    "Engenheiro de dados": "Data Engineer",
+    "Gerente de Dados e IA": "Manager",
+    "Pesquisador e Desenvolvedor Fullstack": "Developer",
+    "Pesquisador": "Researcher",
+    "Especialista": "Other",
     # EN raw labels
-    "Data scientist": "data_scientist",
-    "Software Developer (Backend, front-end, fullstack)": "developer",
-    "Machine Learning Engineer": "ml_engineer",
-    "Data engineer": "data_engineer",
-    "Researcher": "researcher",
-    "Data and AI Manager": "manager",
+    "Data scientist": "Data Scientist",
+    "Software Developer (Backend, front-end, fullstack)": "Developer",
+    "Machine Learning Engineer": "ML Engineer",
+    "Data engineer": "Data Engineer",
+    "DevOps engineer": "DevOps Engineer",
+    "Researcher": "Researcher",
+    "Data and AI Manager": "Manager",
+    "Tech manager": "Manager",         
+    "Product owner": "Other",
 }
 
 # Demographics normalization (language-agnostic derived columns)
@@ -290,21 +325,23 @@ AGE_BAND = {
 
 EDUCATION_NORM = {
     # PT raw labels
-    "Ensino médio": "high_school",
-    "Ensino superior": "undergraduate",
-    "Estudante de Mestrado": "ms_student",
-    "Mestrado": "master",
-    "Estudante de Doutorado": "phd_student",
-    "Doutorado": "doctorate",
-    "Especialização": "specialization",
-    # EN raw labels
-    "High school": "high_school",
-    "Undergraduate": "undergraduate", "Higher education": "undergraduate",
-    "Master's student": "ms_student",
-    "Master": "master",
-    "Doctoral student": "phd_student",
-    "Doctorate": "doctorate",
-    "Specialization": "specialization",
+    "Ensino médio": "High School",
+    "Ensino superior": "Undergraduate",
+    "Estudante de Mestrado": "Master's student",
+    "Mestrado": "Master",
+    "Estudante de Doutorado": "Doctoral student",
+    "Doutorado": "Doctorate",
+    "Especialização": "Specialization",
+    "Especialista": "Specialization",
+
+    "High school": "High School",
+    "Undergraduate": "Undergraduate",
+    "Higher education": "Undergraduate",
+    "Master's student": "Master's student",
+    "Master": "Master",
+    "Doctoral student": "Doctoral student",
+    "Doctorate": "Doctorate",
+    "Specialization": "Specialization"
 }
 
 STATE_TO_UF: dict[str, str] = {
@@ -361,6 +398,10 @@ COUNTRY_ALIASES = {
     "colombia": "Colombia", "colômbia": "Colombia",
     "portugal": "Portugal",
     "spain": "Spain", "espanha": "Spain",
+    "usa": "United States", "united states": "United States",
+    "prc": "China", "china": "China",
+    "ireland": "Ireland", "irlanda": "Ireland",
+    "fora, dublin/irlanda": "Ireland",
 }
 
 
@@ -460,10 +501,42 @@ def setup_matplotlib() -> None:
     })
 
 
-def save_fig(fig: plt.Figure, name: str) -> Path:
-    """Save the figure as a PDF in the paper's figures folder."""
+def save_latex(df: pd.DataFrame, name: str, caption: str = "", label: str = "", **kwargs) -> Path:
+    """Save a DataFrame as a LaTeX booktabs table in the tables folder."""
+    out = DATA_PROC / "tables" / f"{name}.tex"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    index = kwargs.pop("index", False)
+    kwargs.pop("booktabs", None)
+    kwargs.pop("escape", None)
+    styler = df.style.hide(axis="index") if not index else df.style
+    tex = styler.to_latex(hrules=True, **kwargs)
+    if caption or label:
+        wrap = "\\begin{table}[t]\n"
+        if caption:
+            wrap += f"  \\caption{{{caption}}}\n"
+        if label:
+            wrap += f"  \\label{{{label}}}\n"
+        wrap += "  \\centering\n  \\small\n"
+        wrap += tex
+        wrap += "\\end{table}\n"
+        tex = wrap
+    out.write_text(tex, encoding="utf-8")
+    return out
+
+
+def save_fig(fig, name: str) -> Path:
+    """Save a figure as PDF in the paper's figures folder.
+
+    Accepts both matplotlib Figure (uses savefig) and Plotly Figure (uses
+    write_image, requires kaleido).
+    """
     out = FIGURES / f"{name}.pdf"
-    fig.savefig(out, bbox_inches="tight")
+    if hasattr(fig, "write_image"):
+        w = fig.layout.width or None
+        h = fig.layout.height or None
+        fig.write_image(str(out), width=w, height=h)
+    else:
+        fig.savefig(out, bbox_inches="tight")
     return out
 
 
@@ -489,15 +562,11 @@ def _read_one(path: Path, language: str, has_dropdown_artefact: bool) -> pd.Data
 
 def load_raw() -> pd.DataFrame:
     """Concatenate the PT (national) and EN (international) forms into a single frame.
-
-    Raw PT: 32 × 63 (extra `@dropdown` column dropped). Raw EN: 9 × 62.
-    Output: 41 × 63 (62 original cols + `language`).
+    Output: N × 63 (62 original cols + `language`).
     """
     pt = _read_one(RAW_XLSX_PT, "pt", has_dropdown_artefact=True)
     en = _read_one(RAW_XLSX_EN, "en", has_dropdown_artefact=False)
     df = pd.concat([pt, en], ignore_index=True)
-    if df.shape != (41, 63):
-        raise ValueError(f"Expected (41, 63), got {df.shape}")
     return df
 
 
