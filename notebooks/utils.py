@@ -260,10 +260,10 @@ SENIORITY_NORM = {
     "Pleno (6 a 9 anos)":     "Full (6 to 9 years)",
     "Sênior (10+ anos)":      "Senior (10+ years)",
     # EN raw labels
-    "Trainee":                "Trainee",
+    "Trainee": "Trainee",
     "Junior (up to 5 years)": "Junior (up to 5 years)",
-    "Full (6 to 9 years)":    "Full (6 to 9 years)",
-    "Senior (10+ years)":     "Senior (10+ years)",
+    "Full (6 to 9 years)": "Full (6 to 9 years)",
+    "Senior (10+ years)": "Senior (10+ years)",
 }
 
 SENIORITY_GROUP = {
