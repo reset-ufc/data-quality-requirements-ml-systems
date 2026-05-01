@@ -224,6 +224,17 @@ SUPPORT_FREQ_MAP = {
     "Always": 4,
 }
 
+VERSIONING_NORM = {
+    # PT
+    "Garante a consistência e rastreabilidade dos dados ao longo do tempo, permitindo que mudanças no dataset sejam documentadas e verificadas.": "ensures_consistency_traceability",
+    "Elimina a necessidade de documentar alterações no dataset, pois todas as mudanças são automaticamente aplicadas ao modelo.": "eliminates_documentation_need",
+    "Aumenta a quantidade de dados disponíveis, sem necessidade de verificação de consistência entre as versões.": "increases_data_quantity",
+    # EN
+    "Ensures data consistency and traceability over time, allowing changes to the dataset to be documented and verified.": "ensures_consistency_traceability",
+    "Eliminates the need to document changes to the dataset, as all changes are automatically applied to the model.": "eliminates_documentation_need",
+    "I have no experience in this regard": "no_experience",
+}
+
 # ---------------------------------------------------------------------------
 # Demographics normalization
 # ---------------------------------------------------------------------------
@@ -244,44 +255,28 @@ SENIORITY_ORDINAL = {
 
 SENIORITY_NORM = {
     # PT raw labels
-    "Estagiário":             "Intern",
+    "Estagiário":             "Trainee",
     "Júnior (até 5 anos)":    "Junior (up to 5 years)",
-    "Pleno (6 a 9 anos)":     "Mid-level (6 to 9 years)",
+    "Pleno (6 a 9 anos)":     "Full (6 to 9 years)",
     "Sênior (10+ anos)":      "Senior (10+ years)",
     # EN raw labels
-    "Intern":                 "Intern",
-    "Trainee":                "Intern",
+    "Trainee":                "Trainee",
     "Junior (up to 5 years)": "Junior (up to 5 years)",
-    "Mid (6 to 9 years)":     "Mid-level (6 to 9 years)",
-    "Full (6 to 9 years)":    "Mid-level (6 to 9 years)",
+    "Full (6 to 9 years)":    "Full (6 to 9 years)",
     "Senior (10+ years)":     "Senior (10+ years)",
-    "Estagiário": "intern",
-    "Júnior (até 5 anos)": "junior",
-    "Pleno (6 a 9 anos)": "mid",
-    "Sênior (10+ anos)": "senior",
-    # EN raw labels
-    "Intern": "intern",
-    "Trainee": "intern",
-    "Junior (up to 5 years)": "junior",
-    "Mid (6 to 9 years)": "mid",
-    "Full (6 to 9 years)": "mid",
-    "Senior (10+ years)": "senior",
 }
 
-# Senior (>= mid) vs Junior
 SENIORITY_GROUP = {
     # PT raw labels
-    "Estagiário": "junior",
-    "Júnior (até 5 anos)": "junior",
-    "Pleno (6 a 9 anos)": "senior",
-    "Sênior (10+ anos)": "senior",
+    "Estagiário": "Trainee",
+    "Júnior (até 5 anos)": "Junior (up to 5 years)",
+    "Pleno (6 a 9 anos)": "Full (6 to 9 years)",
+    "Sênior (10+ anos)": "Senior (10+ years)",
     # EN raw labels
-    "Intern": "junior",
-    "Trainee": "junior",
-    "Junior (up to 5 years)": "junior",
-    "Mid (6 to 9 years)": "senior",
-    "Full (6 to 9 years)": "senior",
-    "Senior (10+ years)": "senior",
+    "Trainee": "Trainee",
+    "Junior (up to 5 years)": "Junior (up to 5 years)",
+    "Full (6 to 9 years)": "Full (6 to 9 years)",
+    "Senior (10+ years)": "Senior (10+ years)",
 }
 
 ROLE_GROUP = {
