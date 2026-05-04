@@ -146,19 +146,19 @@ SKILL_LABELS_PT = SKILL_LABELS_EN
 # ---------------------------------------------------------------------------
 SKILL_MAP = {
     # PT raw labels
-    "Muito baixa": 1, "Muito baixo": 1,
-    "Abaixo da Média": 2, "Abaixo da média": 2,
+    "Muito baixa": 1,
+    "Abaixo da Média": 2,
     "Média": 3,
-    "Acima da média": 4, "Acima da Média": 4,
-    "Muito alto": 5, "Muito alta": 5,
+    "Acima da média": 4,
+    "Muito alto": 5,
     "Não se aplica": pd.NA,
     # EN raw labels
-    "Very low": 1, "Very Low": 1,
-    "Below average": 2, "Below Average": 2,
+    "Very low": 1,
+    "Below Average": 2,
     "Average": 3,
-    "Above average": 4, "Above Average": 4,
-    "Very high": 5, "Very High": 5,
-    "Not applicable": pd.NA, "Not Applicable": pd.NA, "N/A": pd.NA,
+    "Above average": 4,
+    "Very high": 5,
+    "Not applicable": pd.NA,
 }
 SKILL_LABELS_ORDER = ["Very low", "Below average", "Average", "Above average", "Very high"]
 
@@ -170,23 +170,23 @@ IMPORTANCE_MAP = {
     "Importante": 4,
     "Muito importante": 5,
     # EN raw labels
-    "Not important": 1, "Not at all important": 1, "Not important at all": 1,
-    "Slightly important": 2, "Not very important": 2,
-    "Neutral": 3, "Moderately important": 3,
+    "Not important at all": 1,
+    "Not very important": 2,
+    "Neutral": 3,
     "Important": 4,
-    "Very important": 5, "Extremely important": 5,
+    "Very important": 5,
 }
 IMPORTANCE_LABELS_ORDER = ["Not important", "Slightly important", "Neutral", "Important", "Very important"]
 
 PRIORITY_MAP = {
     # PT raw labels
-    "Não é uma prioridade": 1, "Sem prioridade": 1,
+    "Não é uma prioridade": 1,
     "Baixa prioridade": 2,
     "Neutro": 3,
     "Alta prioridade": 4,
     "Essencial": 5,
     # EN raw labels
-    "No priority": 1, "Not a priority": 1,
+    "Not a priority": 1,
     "Low priority": 2,
     "Neutral": 3,
     "High priority": 4,
@@ -211,7 +211,6 @@ DISCUSSION_FREQ_MAP = {
 
 SUPPORT_FREQ_MAP = {
     # PT raw labels
-    "Nunca": 0,
     "Raramente": 1,
     "Ocasionalmente": 2,
     "Frequentemente": 3,
@@ -225,15 +224,274 @@ SUPPORT_FREQ_MAP = {
 }
 
 VERSIONING_NORM = {
-    # PT
+    # PT raw labels — Q16
     "Garante a consistência e rastreabilidade dos dados ao longo do tempo, permitindo que mudanças no dataset sejam documentadas e verificadas.": "ensures_consistency_traceability",
-    "Elimina a necessidade de documentar alterações no dataset, pois todas as mudanças são automaticamente aplicadas ao modelo.": "eliminates_documentation_need",
     "Aumenta a quantidade de dados disponíveis, sem necessidade de verificação de consistência entre as versões.": "increases_data_quantity",
-    # EN
+    "Elimina a necessidade de documentar alterações no dataset, pois todas as mudanças são automaticamente aplicadas ao modelo.": "eliminates_documentation_need",
+    "Reduz a precisão dos dados, pois versões antigas não são mais utilizadas nos modelos.": "reduces_accuracy",
+    # EN raw labels — Q16
     "Ensures data consistency and traceability over time, allowing changes to the dataset to be documented and verified.": "ensures_consistency_traceability",
+    "Increases the amount of data available, without the need to check consistency between versions.": "increases_data_quantity",
     "Eliminates the need to document changes to the dataset, as all changes are automatically applied to the model.": "eliminates_documentation_need",
+    "Reduces data accuracy, as old versions are no longer used in models.": "reduces_accuracy",
     "I have no experience in this regard": "no_experience",
 }
+
+# ---------------------------------------------------------------------------
+# Text-to-text translation maps — PT+EN → canonical EN label (for quality_analysis.csv)
+# Used with pd.Series.replace() so unmapped values pass through unchanged.
+# ---------------------------------------------------------------------------
+
+# Q8 — skill level
+SKILL_TEXT: dict[str, str] = {
+    # PT raw labels
+    "Muito baixa":    "Very low",
+    "Abaixo da Média":"Below Average",
+    "Média":          "Average",
+    "Acima da média": "Above average",
+    "Muito alto":     "Very high",
+    "Não se aplica":  "Not applicable",
+    # EN raw labels (normalize casing)
+    "Very low":       "Very low",
+    "Below Average":  "Below Average",
+    "Average":        "Average",
+    "Above average":  "Above average",
+    "Very high":      "Very high",
+    "Not applicable": "Not applicable",
+}
+
+# Q11 — importance
+IMPORTANCE_TEXT: dict[str, str] = {
+    # PT raw labels
+    "Nada importante":  "Not important at all",
+    "Pouco importante": "Not very important",
+    "Neutro":           "Neutral",
+    "Importante":       "Important",
+    "Muito importante": "Very important",
+    # EN raw labels
+    "Not important at all": "Not important at all",
+    "Not very important":   "Not very important",
+    "Neutral":              "Neutral",
+    "Important":            "Important",
+    "Very important":       "Very important",
+}
+
+# Q13 — priority
+PRIORITY_TEXT: dict[str, str] = {
+    # PT raw labels
+    "Não é uma prioridade": "Not a priority",
+    "Baixa prioridade":     "Low priority",
+    "Neutro":               "Neutral",
+    "Alta prioridade":      "High priority",
+    "Essencial":            "Essential",
+    # EN raw labels
+    "Not a priority": "Not a priority",
+    "Low priority":   "Low priority",
+    "Neutral":        "Neutral",
+    "High priority":  "High priority",
+    "Essential":      "Essential",
+}
+
+# Q16 — versioning (maps to full EN text)
+VERSIONING_TEXT: dict[str, str] = {
+    # PT raw labels
+    "Garante a consistência e rastreabilidade dos dados ao longo do tempo, permitindo que mudanças no dataset sejam documentadas e verificadas.":
+        "Ensures data consistency and traceability over time, allowing changes to the dataset to be documented and verified.",
+    "Aumenta a quantidade de dados disponíveis, sem necessidade de verificação de consistência entre as versões.":
+        "Increases the amount of data available, without the need to check consistency between versions.",
+    "Elimina a necessidade de documentar alterações no dataset, pois todas as mudanças são automaticamente aplicadas ao modelo.":
+        "Eliminates the need to document changes to the dataset, as all changes are automatically applied to the model.",
+    "Reduz a precisão dos dados, pois versões antigas não são mais utilizadas nos modelos.":
+        "Reduces data accuracy, as old versions are no longer used in models.",
+    # EN raw labels (pass-through)
+    "Ensures data consistency and traceability over time, allowing changes to the dataset to be documented and verified.":
+        "Ensures data consistency and traceability over time, allowing changes to the dataset to be documented and verified.",
+    "Increases the amount of data available, without the need to check consistency between versions.":
+        "Increases the amount of data available, without the need to check consistency between versions.",
+    "Eliminates the need to document changes to the dataset, as all changes are automatically applied to the model.":
+        "Eliminates the need to document changes to the dataset, as all changes are automatically applied to the model.",
+    "Reduces data accuracy, as old versions are no longer used in models.":
+        "Reduces data accuracy, as old versions are no longer used in models.",
+    "I have no experience in this regard": "I have no experience in this regard",
+}
+
+# Q19 — discussion frequency
+DISCUSSION_TEXT: dict[str, str] = {
+    # PT raw labels
+    "Nunca": "Never",
+    "Menos de uma vez por mês": "Less than once a month",
+    "Menos de uma vez por semana, mas pelo menos uma vez por mês": "Less than once a week, but at least once a month",
+    "Pelo menos uma vez por semana, mas não todos os dias": "At least once a week, but not every day",
+    "Todos os dias": "Every day",
+    # EN raw labels
+    "Never": "Never",
+    "Less than once a month": "Less than once a month",
+    "Less than once a week, but at least once a month": "Less than once a week, but at least once a month",
+    "At least once a week, but not every day": "At least once a week, but not every day",
+    "Every day": "Every day",
+}
+
+# Q22 — support frequency
+SUPPORT_TEXT: dict[str, str] = {
+    # PT raw labels
+    "Raramente":    "Rarely",
+    "Ocasionalmente": "Occasionally",
+    "Frequentemente": "Often",
+    "Sempre":       "Always",
+    "Nunca":        "Never",
+    # EN raw labels
+    "Never":        "Never",
+    "Rarely":       "Rarely",
+    "Occasionally": "Occasionally",
+    "Often":        "Often",
+    "Always":       "Always",
+}
+
+# Q17 — how data quality is incorporated (multiple-choice, term-by-term translation)
+# Each cell may contain several options joined by ", ". Use translate_multi(), not str.replace().
+Q17_TEXT: dict[str, str] = {
+    # PT → EN
+    "Avaliação inicial durante a coleta e preparação de dados":
+        "Initial assessment during data collection and preparation",
+    "Monitoramento contínuo durante todo o ciclo de vida do modelo":
+        "Continuous monitoring throughout the model's life cycle",
+    "Conjuntos de testes são aplicados para validar a consistência, completude e precisão dos dados antes de serem usados no treinamento.":
+        "Test sets are applied to validate the consistency, completeness and accuracy of the data before it is used for training.",
+    "Não existe uma estratégia formal para assegurar a qualidade dos dados durante o desenvolvimento.":
+        "There is no formal strategy for ensuring data quality during development.",
+    # EN → EN (identity — EN respondents already answered in English)
+    "Initial assessment during data collection and preparation":
+        "Initial assessment during data collection and preparation",
+    "Continuous monitoring throughout the model's life cycle":
+        "Continuous monitoring throughout the model's life cycle",
+    "Test sets are applied to validate the consistency, completeness and accuracy of the data before it is used for training.":
+        "Test sets are applied to validate the consistency, completeness and accuracy of the data before it is used for training.",
+    "There is no formal strategy for ensuring data quality during development.":
+        "There is no formal strategy for ensuring data quality during development.",
+}
+
+# Q18 — how model-quality impact is measured (multiple-choice, term-by-term translation)
+Q18_TEXT: dict[str, str] = {
+    # PT → EN
+    "Testes A/B":
+        "A/B testing",
+    "Análise de métricas de performance (ex.: precisão, recall)":
+        "Analysis of performance metrics (e.g. precision, recall)",
+    "Revisão manual dos resultados":
+        "Manual review of results",
+    # EN → EN (identity)
+    "A/B testing":
+        "A/B testing",
+    "Analysis of performance metrics (e.g. precision, recall)":
+        "Analysis of performance metrics (e.g. precision, recall)",
+    "Manual review of results":
+        "Manual review of results",
+}
+
+# Q20 — how data quality is documented/communicated (multiple-choice, term-by-term translation)
+Q20_TEXT: dict[str, str] = {
+    # PT → EN
+    "Linguagem estruturada (texto)":
+        "Structured language (text)",
+    "Ferramentas de Gerenciamento de Projetos (Jira, Trello ou Asana)":
+        "Project management tools (Jira, Trello or Asana)",
+    "Documentação Centralizada (Sistemas como Confluence, Google Docs ou Notion)":
+        "Centralized documentation (systems such as Confluence, Google Docs or Notion)",
+    "Reuniões de Alinhamento":
+        "Alignment meetings",
+    "Relatórios Periódicos":
+        "Periodic reports",
+    # EN → EN (identity)
+    "Structured language (text)":
+        "Structured language (text)",
+    "Project management tools (Jira, Trello or Asana)":
+        "Project management tools (Jira, Trello or Asana)",
+    "Centralized documentation (systems such as Confluence, Google Docs or Notion)":
+        "Centralized documentation (systems such as Confluence, Google Docs or Notion)",
+    "Alignment meetings":
+        "Alignment meetings",
+    "Periodic reports":
+        "Periodic reports",
+}
+
+# Q21 — main challenges in guaranteeing data reliability (multiple-choice, term-by-term translation)
+Q21_TEXT: dict[str, str] = {
+    # PT → EN
+    "Inconsistência entre diferentes fontes de dados":
+        "Inconsistency between different data sources",
+    "Dados incompletos ou ausentes":
+        "Incomplete or missing data",
+    "Falta de padronização nos formatos de dados":
+        "Lack of standardization in data formats",
+    "Dados desatualizados ou não confiáveis":
+        "Outdated or unreliable data",
+    "Erros introduzidos durante a coleta e processamento":
+        "Errors introduced during collection and processing",
+    "Dificuldade na rastreabilidade e versionamento dos dados":
+        "Difficulty in data traceability and versioning",
+    "Falta de ferramentas adequadas para validação da qualidade dos dados":
+        "Lack of adequate tools for validating data quality",
+    # EN → EN (identity)
+    "Inconsistency between different data sources":
+        "Inconsistency between different data sources",
+    "Incomplete or missing data":
+        "Incomplete or missing data",
+    "Lack of standardization in data formats":
+        "Lack of standardization in data formats",
+    "Outdated or unreliable data":
+        "Outdated or unreliable data",
+    "Errors introduced during collection and processing":
+        "Errors introduced during collection and processing",
+    "Difficulty in data traceability and versioning":
+        "Difficulty in data traceability and versioning",
+    "Lack of adequate tools for validating data quality":
+        "Lack of adequate tools for validating data quality",
+}
+
+# ---------------------------------------------------------------------------
+# Multi-choice translation helper
+# ---------------------------------------------------------------------------
+
+def translate_multi(value, mapping: dict, sep: str = ", ") -> str:
+    """Translate a comma-separated multi-choice field term by term.
+
+    Iterates through the cell string using greedy longest-match so that terms
+    which themselves contain the separator (e.g. "precision, recall") are never
+    split mid-way. Unrecognised tokens pass through unchanged.
+
+    Use this instead of a str.replace() loop for multi-choice columns.
+    """
+    import pandas as pd  # local import keeps this usable before module-level pd
+
+    if not isinstance(value, str) or pd.isna(value):
+        return value
+
+    sorted_keys = sorted(mapping, key=len, reverse=True)
+    result: list[str] = []
+    remaining = value
+
+    while remaining:
+        matched = False
+        for key in sorted_keys:
+            if remaining.startswith(key):
+                result.append(mapping[key])
+                remaining = remaining[len(key):]
+                if remaining.startswith(sep):
+                    remaining = remaining[len(sep):]
+                matched = True
+                break
+        if not matched:
+            # Unknown token (free-text addition or unmapped option): consume to next sep
+            idx = remaining.find(sep)
+            if idx == -1:
+                result.append(remaining)
+                remaining = ""
+            else:
+                result.append(remaining[:idx])
+                remaining = remaining[idx + len(sep):]
+
+    return sep.join(result)
+
 
 # ---------------------------------------------------------------------------
 # Demographics normalization
@@ -245,10 +503,8 @@ SENIORITY_ORDINAL = {
     "Pleno (6 a 9 anos)": 3,
     "Sênior (10+ anos)": 4,
     # EN raw labels
-    "Intern": 1,
     "Trainee": 1,
     "Junior (up to 5 years)": 2,
-    "Mid (6 to 9 years)": 3,
     "Full (6 to 9 years)": 3,
     "Senior (10+ years)": 4,
 }
@@ -280,33 +536,27 @@ SENIORITY_GROUP = {
 }
 
 ROLE_GROUP = {
-    # PT raw labels
+    # PT raw labels — Q5
     "Cientista de dados": "Data Scientist",
     "Desenvolvedor de Software (Backend, front-end, fullstack)": "Developer",
     "Engenheiro de Machine Learning": "ML Engineer",
     "Engenheiro de dados": "Data Engineer",
-    "Gerente de Dados e IA": "Data and AI Manager",
-    "Pesquisador e Desenvolvedor Fullstack": "Developer",
-    "Pesquisador": "Researcher",
-    "Especialista": "Other",
-    # EN raw labels
+    "QA engineer": "QA Engineer",
+    # EN raw labels — Q5
     "Data scientist": "Data Scientist",
     "Software Developer (Backend, front-end, fullstack)": "Developer",
     "Machine Learning Engineer": "ML Engineer",
     "Data engineer": "Data Engineer",
     "DevOps engineer": "DevOps Engineer",
-    "Researcher": "Researcher",
-    "Data and AI Manager": "Data and AI Manager",
-    "Tech manager": "Tech manager",         
+    "Tech manager": "Tech manager",
     "Product owner": "Product owner",
+    "QA engineer": "QA Engineer",
 }
 
 # Demographics normalization (language-agnostic derived columns)
 GENDER_NORM = {
-    "Homem": "male", "Men": "male", "Man": "male",
+    "Homem": "male", "Men": "male",
     "Mulher": "female", "Woman": "female",
-    "Outro": "other", "Other": "other",
-    "Prefiro não responder": "undisclosed", "Prefer not to say": "undisclosed",
 }
 
 AGE_BAND = {
@@ -314,29 +564,25 @@ AGE_BAND = {
     "25-34 anos": "25-34", "25-34 years old": "25-34",
     "35-44 anos": "35-44", "35-44 years old": "35-44",
     "45-54 anos": "45-54", "45-54 years old": "45-54",
-    "55-64 anos": "55-64", "55-64 years old": "55-64",
-    "65+ anos": "65+", "65+ years old": "65+",
 }
 
 EDUCATION_NORM = {
-    # PT raw labels
+    # PT raw labels — Q4
     "Ensino médio": "High School",
     "Ensino superior": "Undergraduate",
+    "Especialização": "Specialization",
     "Estudante de Mestrado": "Master's student",
     "Mestrado": "Master",
     "Estudante de Doutorado": "Doctoral student",
     "Doutorado": "Doctorate",
-    "Especialização": "Specialization",
-    "Especialista": "Specialization",
-
+    # EN raw labels — Q4
     "High school": "High School",
-    "Undergraduate": "Undergraduate",
     "Higher education": "Undergraduate",
+    "Specialization": "Specialization",
     "Master's student": "Master's student",
     "Master": "Master",
     "Doctoral student": "Doctoral student",
     "Doctorate": "Doctorate",
-    "Specialization": "Specialization"
 }
 
 STATE_TO_UF: dict[str, str] = {
@@ -453,7 +699,6 @@ def country_to_region(country: str | None, uf: str | None) -> str | None:
     if country == "Brazil":
         return None
     return "International"
-
 
 # ---------------------------------------------------------------------------
 # Plot styling — color-blind safe

@@ -1,6 +1,6 @@
 # Codebook — Data Quality Requirements in ML Survey
 
-**N**: 51 respondents (32 from PT-BR form + 19 from EN international form)
+**N**: 56 respondents (37 from PT-BR form + 19 from EN international form)
 **Collection window**: 2025-02-14 → 2026-04-30
 
 > Free-text responses and demographic categoricals are kept in their original language (PT or EN). For cross-language analyses use the derived columns: `gender_norm`, `age_band`, `education_norm`, `seniority_group`, `role_group`. Likert items (Q8/Q11/Q13/Q19/Q22) are mapped to identical ordinal scales across both subsets via bilingual lookup tables in `notebooks/utils.py`.
@@ -11,21 +11,17 @@
 |---|---|---|---|
 | `language` | categorical | pt, en | source subset |
 | `timestamp` | datetime | Forms timestamp | - |
-| `age` | categorical | raw label (PT "anos" / EN "years old") | Q1 |
-| `age_band` | categorical | 18-24 / 25-34 / 35-44 / 45-54 / ... | derived |
+| `age_band` | categorical | 18-24 / 25-34 / 35-44 / 45-54 / ... | Q1 derived |
 | `country` | categorical | Brazil, Germany, France, Colombia, ... | derived (Q2) |
 | `state` | UF (2 letters) | AC..TO (only when country=Brazil) | Q2 |
 | `region` | categorical | North / Northeast / Central-West / Southeast / South / International | derived |
-| `gender` | categorical | raw label (PT or EN) | Q3 |
 | `gender_norm` | categorical | male, female, other, undisclosed | derived |
-| `education` | categorical | raw label (PT or EN) | Q4 |
 | `education_norm` | categorical | high_school / undergraduate / ms_student / master / phd_student / doctorate / specialization | derived |
-| `role` | categorical | raw label (PT or EN) | Q5 |
 | `role_group` | categorical | data_scientist / developer / ml_engineer / data_engineer / researcher / manager / other | derived |
-| `seniority` | ordinal | Intern / Junior / Mid / Senior (PT or EN label) | Q6 |
 | `seniority_ordinal` | int 1-4 | 1=Intern .. 4=Senior | derived |
 | `seniority_group` | categorical | junior, senior | derived |
 | `n_projects` | int | 0..40 (EN ranges parsed to midpoint) | Q7 |
+| `versioning_norm` | categorical | ensures_consistency_traceability / eliminates_documentation_need / increases_data_quantity / no_experience | Q16 |
 | `skill_cleaning` | Likert 1-5 | 1=Very low .. 5=Very high | Q8 |
 | `skill_normalization` | Likert 1-5 | 1=Very low .. 5=Very high | Q8 |
 | `skill_outliers` | Likert 1-5 | 1=Very low .. 5=Very high | Q8 |
@@ -71,7 +67,6 @@
 | `imp_justification` | string (open) | free-text response in PT or EN | varies |
 | `pri_justification` | string (open) | free-text response in PT or EN | varies |
 | `balance_open` | string (open) | free-text response in PT or EN | varies |
-| `versioning_open` | string (open) | free-text response in PT or EN | varies |
 | `incorporation_open` | string (open) | free-text response in PT or EN | varies |
 | `measurement_open` | string (open) | free-text response in PT or EN | varies |
 | `documentation_open` | string (open) | free-text response in PT or EN | varies |
