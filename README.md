@@ -19,18 +19,18 @@ This repository contains the replication package for the study *"Practitioners' 
 ```
 .
 ├── data/
-│   ├── raw/                        # Original survey exports (not anonymized)
+│   ├── raw/                        # Original (anonymized), translated and mapped surveys 
 │   │   ├── survey_responses.xlsx   # Portuguese form (37 respondents)
 │   │   ├── survey_responses_2.xlsx # English form (19 respondents)
 │   │   ├── parcial_quali.xlsx      # Categorical responses mappaed to English 
 │   │   └── full_quali.xlsx         # Open responses translated and hand-edited
-│   ├── processed/                  # Cleaned and normalized data (output of data_cleaning.ipynb)
+│   ├── processed/                  # Cleaned and normalized data 
 │   │   ├── anonymized.csv          # Cleaned data for notebooks
-│   │   ├── likert_importance.csv   # Long-format importance ratings (728 rows)
-│   │   ├── likert_priority.csv     # Long-format priority ratings (728 rows)
-│   │   ├── skills.csv              # Long-format skill self-assessments (560 rows)
-│   │   ├── open_responses.csv      # Open-ended responses (364 rows)
-│   │   ├── words.csv               # Q9 word associations with position (279 tokens)
+│   │   ├── likert_importance.csv   # Long-format importance ratings 
+│   │   ├── likert_priority.csv     # Long-format priority ratings 
+│   │   ├── skills.csv              # Long-format skill self-assessments 
+│   │   ├── open_responses.csv      # Open-ended responses 
+│   │   ├── words.csv               # Q9 word associations with position 
 │   │   └── tables/
 │   │       └── spearman_imp_vs_pri.tex  # LaTeX table: Spearman correlation results
 │   └── codebook/                   # Qualitative coding of open-ended responses
@@ -65,7 +65,7 @@ Run the notebooks in the following order. Each notebook reads outputs produced b
 
 ### Step 1 — `data_cleaning.ipynb`
 
-Loads both survey forms (PT and EN), validates consent, normalizes and anonymizes responses, maps Likert text to numeric scales, and exports all processed datasets to `data/processed/` and `data/raw/`
+Loads both survey forms (PT and EN), validates consent, normalizes responses, maps Likert text to numeric scales, and exports all processed datasets to `data/processed/` and `data/raw/`
 ---
 
 ### Step 2 — `demographic_characterization.ipynb`
