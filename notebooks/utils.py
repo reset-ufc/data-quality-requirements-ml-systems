@@ -751,17 +751,12 @@ def save_fig(fig, name: str) -> Path:
 # ---------------------------------------------------------------------------
 # Loading helpers
 # ---------------------------------------------------------------------------
-def _read_one(path: Path, language: str, has_dropdown_artefact: bool) -> pd.DataFrame:
+def _read_one(path: Path, language: str) -> pd.DataFrame:
     if not path.exists():
         raise FileNotFoundError(f"Input file not found at {path}.")
     df = pd.read_excel(path)
-    if has_dropdown_artefact:
-        df = df.iloc[:, :62]
-    if df.shape[1] != 62:
-        raise ValueError(f"{path.name}: expected 62 cols, got {df.shape[1]}")
-    df.columns = [COLUMN_RENAME[i] for i in range(62)]
-    # Strip trailing whitespace on categorical columns (Forms occasionally leaves
-    # extra spaces in option labels, e.g. "Machine Learning Engineer ").
+    df.columns = [COLUMN_RENAME[i] for i in range(61)]
+
     for c in ("age", "gender", "education", "role", "seniority", "discussion_freq", "support_freq"):
         df[c] = df[c].astype("string").str.strip()
     df.insert(0, "language", language)
@@ -770,10 +765,9 @@ def _read_one(path: Path, language: str, has_dropdown_artefact: bool) -> pd.Data
 
 def load_raw() -> pd.DataFrame:
     """Concatenate the PT (national) and EN (international) forms into a single frame.
-    Output: N × 63 (62 original cols + `language`).
     """
-    pt = _read_one(RAW_XLSX_PT, "pt", has_dropdown_artefact=True)
-    en = _read_one(RAW_XLSX_EN, "en", has_dropdown_artefact=False)
+    pt = _read_one(RAW_XLSX_PT, "pt")
+    en = _read_one(RAW_XLSX_EN, "en")
     df = pd.concat([pt, en], ignore_index=True)
     return df
 
