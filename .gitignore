@@ -233,10 +233,3 @@ data/raw/**
 !data/raw/survey_responses_2.xlsx
 !data/raw/parcial_quali.xlsx
 !data/raw/full_quali.xlsx
-
-
-# Figures are generated outputs; keep only placeholders in version control.
-figures/**
-!figures/
-!figures/.gitkeep
-!figures/**/.gitkeep
