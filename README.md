@@ -147,4 +147,4 @@ pip install -r requirements.txt
 
 ## Dataset
 
-The raw survey files in `data/raw/` are included for full transparency. The codebooks in `data/codebook/` document the qualitative coding applied to open-ended responses (Q10, Q12, Q14, Q15) following Grounded Theory procedures.
+The raw survey files in `data/raw/` are included for full transparency. The codebooks in `data/codebook/` document the qualitative coding applied to open-ended responses (Q10, Q12, Q14, Q15).
