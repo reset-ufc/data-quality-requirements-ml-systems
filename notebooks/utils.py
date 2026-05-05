@@ -125,6 +125,12 @@ CHARACTERISTICS_EN = {
 # Backwards-compat alias (formerly PT-only labels)
 CHARACTERISTICS_PT = CHARACTERISTICS_EN
 
+# Display labels used in paper figures/tables.
+# "precision" is relabelled "Accuracy" because the survey description pointed
+# to the ISO 25012 accuracy concept, not ML precision (reproducibility).
+# Q9 word normalization is intentionally unaffected.
+CHARACTERISTICS_PAPER: dict[str, str] = {**CHARACTERISTICS_EN, "precision": "Accuracy"}
+
 SKILL_LABELS_EN = {
     "skill_cleaning": "Data cleaning",
     "skill_normalization": "Normalization/standardization",
