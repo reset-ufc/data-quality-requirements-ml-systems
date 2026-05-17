@@ -148,3 +148,5 @@ pip install -r requirements.txt
 ## Dataset
 
 The raw survey files in `data/raw/` are included for full transparency. The codebooks in `data/codebook/` document the qualitative coding applied to open-ended responses (Q10, Q12, Q14, Q15).
+
+The survey artifacts (Free and Informed Consent Form and Survey Script) of PT-BR and EN-US versions are in /survey artifacts.
