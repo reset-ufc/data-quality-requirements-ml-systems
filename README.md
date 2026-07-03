@@ -1,12 +1,11 @@
-# Replication Package — Practitioners' Perceptions of Data Quality Requirements in Machine Learning-Enabled Systems: An Exploratory Survey
+# Practitioners' Perceptions of Data Quality Requirements in Machine Learning-Enabled Systems: An Exploratory Survey
 
-This repository contains the replication package for the study *"Practitioners' Perceptions of Data Quality Requirements in Machine Learning-Enabled Systems: An Exploratory Survey"*. It provides all data, analysis scripts, and generated documents (figures and tables) of the results reported in the paper.
-
+This repository contains the replication package for the study ["Practitioners' Perceptions of Data Quality Requirements in Machine Learning-Enabled Systems: An Exploratory Survey"](paper/SBES___2026___Kevin___Data_Quality_Requirements_in_ML_Enabled_Systems.pdf). It provides all data, analysis scripts, and generated documents (figures and tables) of the results reported in the paper.
 
 
 ## Context
 
-
+Data quality is an essential factor for the performance, reliability, and security of machine learning-based systems, yet it is still treated implicitly and inconsistently in practice. This study investigates—through an exploratory survey of 56 professionals from seven countries—how these professionals perceive, prioritize, and manage data quality throughout the ML system lifecycle.
 
 ---
 
@@ -18,55 +17,8 @@ This repository contains the replication package for the study *"Practitioners' 
 | **RQ₂** | How do practitioners evaluate and incorporate data quality requirements throughout the ML lifecycle? |
 | **RQ₃** | What challenges do practitioners face when ensuring data quality in practice? |
 
----
-
-## Repository Structure
-
-```
-.
-├── data/
-│   ├── raw/                        # Original (anonymized), translated and mapped surveys 
-│   │   ├── survey_responses.xlsx   # Portuguese form (37 respondents)
-│   │   ├── survey_responses_2.xlsx # English form (19 respondents)
-│   │   ├── parcial_quali.xlsx      # Categorical responses mappaed to English 
-│   │   └── full_quali.xlsx         # Open responses translated and hand-edited
-│   ├── processed/                  # Cleaned and normalized data 
-│   │   ├── anonymized.csv          # Cleaned data for notebooks
-│   │   ├── likert_importance.csv   # Long-format importance ratings 
-│   │   ├── likert_priority.csv     # Long-format priority ratings 
-│   │   ├── skills.csv              # Long-format skill self-assessments 
-│   │   ├── open_responses.csv      # Open-ended responses 
-│   │   ├── words.csv               # Q9 word associations with position 
-│   │   └── tables/
-│   │       └── spearman_imp_vs_pri.tex  # LaTeX table: Spearman correlation results
-│   └── codebook/                   # Qualitative coding of open-ended responses
-│       ├── Q10.xlsx                # RE experience narratives
-│       ├── Q12.xlsx                # Importance justifications
-│       ├── Q14.xlsx                # Priority justifications
-│       └── Q15.xlsx                # Trade-off balance strategies
-├── figures/                        # Publication-ready PDF figures (output of notebooks)
-│   ├── skills_diverging.pdf
-│   ├── q9_top_words_by_position.pdf
-│   ├── importance_priority_diverging.pdf
-│   ├── implementation_q17_q20.pdf
-│   ├── mc_group_heatmap_2x2.pdf
-│   └── challenges_support_q21_q22.pdf
-├── notebooks/
-│   ├── utils.py                    # Shared utilities (plotting, parsing, statistics)
-│   ├── data_cleaning.ipynb         # Step 1 — data normalization and anonymization
-│   ├── demographic_characterization.ipynb  # Step 2 — participant characterization
-│   ├── RQ1.ipynb                   # Step 3 — perception and prioritization (Q9–Q16)
-│   ├── RQ2.ipynb                   # Step 4 — implementation practices (Q17–Q20)
-│   └── RQ3.ipynb                   # Step 5 — challenges and support (Q21–Q22)
-├── pyproject.toml
-├── requirements.txt
-└── README.md
-```
-
----
 
 ## Instalation and Usage
-To get started, follow the steps below:
 
 ### Requirements
 
@@ -92,8 +44,6 @@ source venv/bin/activate  # On Windows use: venv\Scripts\activate
 ```bash
 pip install -r requirements.txt
 ```
-
-Run the notebooks in the following order. Each notebook reads outputs produced by the previous one.
 
 ### Test the setup
 To confirm that everything is working:
@@ -124,10 +74,61 @@ Name: count, dtype: int64
 The project does not require significant computing power, so there are likely no obstacles to running it, even on lower-end hardware.
 
 
-### Step 1 — `data_cleaning.ipynb`
+## Repository Structure
+
+```
+.
+├── data/
+│   ├── raw/                        # Original (anonymized), translated and mapped surveys 
+│   │   ├── survey_responses.xlsx   # Portuguese form 
+│   │   ├── survey_responses_2.xlsx # English form 
+│   │   ├── parcial_quali.xlsx      # Categorical responses mapped to English 
+│   │   └── full_quali.xlsx         # Open responses translated to English
+│   ├── processed/                  # Cleaned and normalized data 
+│   │   ├── anonymized.csv          # Cleaned data for notebooks
+│   │   ├── likert_importance.csv   # Long-format importance ratings 
+│   │   ├── likert_priority.csv     # Long-format priority ratings 
+│   │   ├── skills.csv              # Long-format skill self-assessments 
+│   │   ├── open_responses.csv      # Open-ended responses 
+│   │   ├── words.csv               # Q9 word associations with position 
+│   │   └── tables/
+│   │       └── spearman_imp_vs_pri.tex  # LaTeX table: Spearman correlation results
+│   └── codebook/                   # Qualitative coding of open-ended responses
+│       ├── Q10.xlsx                # RE experience narratives
+│       ├── Q12.xlsx                # Importance justifications
+│       ├── Q14.xlsx                # Priority justifications
+│       └── Q15.xlsx                # Trade-off balance strategies
+├── figures/                        # Publication-ready PDF figures (output of notebooks)
+│   ├── skills_diverging.pdf
+│   ├── q9_top_words_by_position.pdf
+│   ├── importance_priority_diverging.pdf
+│   ├── implementation_q17_q20.pdf
+│   ├── mc_group_heatmap_2x2.pdf
+│   └── challenges_support_q21_q22.pdf
+├── notebooks/
+│   ├── utils.py                    # Shared utilities (plotting, parsing, statistics)
+│   ├── data_cleaning.ipynb         # Step 1 — data normalization and anonymization
+│   ├── demographic_characterization.ipynb  # Step 2 — participant characterization
+│   ├── RQ1.ipynb                   # Step 3 — perception and prioritization (Q9–Q16)
+│   ├── RQ2.ipynb                   # Step 4 — implementation practices (Q17–Q20)
+│   └── RQ3.ipynb                   # Step 5 — challenges and support (Q21–Q22)
+├── paper /
+│   └── SBES___2026___Kevin___Data_Quality_Requirements_in_ML_Enabled_Systems.pdf
+├── requirements.txt
+├── .gitignore
+├── README.md
+└── LICENSE
+```
+
+## Running the package, step by step
+
+Run the notebooks (all cells) in the following order. Each notebook reads outputs produced by the previous one.
+
+### Step 1 — ```data_cleaning.ipynb```
+
+(You don't need to run it again if, you already ran it to test the setup.)
 
 Loads both survey forms (PT and EN), validates consent, normalizes responses, maps Likert text to numeric scales, and exports all processed datasets to `data/processed/` and `data/raw/`
----
 
 ### Step 2 — `demographic_characterization.ipynb`
 
@@ -198,6 +199,6 @@ Analyzes the main challenges practitioners face in ensuring data quality and how
 
 ## Dataset
 
-The raw survey files in `data/raw/` are included for full transparency. The codebooks in `data/codebook/` document the qualitative coding applied to open-ended responses (Q10, Q12, Q14, Q15).
+The responses of the two surveys (english and portuguese) are included in `data/raw/` for transparency, but the field email was removed from the files to preserve participants privacy. The codebooks in `data/codebook/` document the qualitative coding applied to open-ended responses (Q10, Q12, Q14, Q15).
 
-The survey artifacts (Free and Informed Consent Form and Survey Script) of PT-BR and EN-US versions are in /survey artifacts.
+**Free and Informed Consent Form and Survey Script** of PT-BR and EN-US versions are in /survey artifacts.
