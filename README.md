@@ -97,12 +97,12 @@ The entire project was carried out and executed using only the Windows 11 operat
 │   │   ├── words.csv               # Q9 word associations with position 
 │   │   └── tables/
 │   │       └── spearman_imp_vs_pri.tex  # LaTeX table: Spearman correlation results
-│   └── codebook/                   # Qualitative coding of open-ended responses
-│       ├── Q10.xlsx                # RE experience narratives
-│       ├── Q12.xlsx                # Importance justifications
-│       ├── Q14.xlsx                # Priority justifications
-│       └── Q15.xlsx                # Trade-off balance strategies
-├── figures/                        # Publication-ready PDF figures (output of notebooks)
+│   └── codebook/          # Qualitative coding of open-ended responses
+│       ├── Q10.xlsx       # RE experience narratives
+│       ├── Q12.xlsx       # Importance justifications
+│       ├── Q14.xlsx       # Priority justifications
+│       └── Q15.xlsx       # Trade-off balance strategies
+├── figures/   # Publication-ready PDF figures (output of notebooks)
 │   ├── skills_diverging.pdf
 │   ├── q9_top_words_by_position.pdf
 │   ├── importance_priority_diverging.pdf
@@ -110,14 +110,19 @@ The entire project was carried out and executed using only the Windows 11 operat
 │   ├── mc_group_heatmap_2x2.pdf
 │   └── challenges_support_q21_q22.pdf
 ├── notebooks/
-│   ├── utils.py                    # Shared utilities (plotting, parsing, statistics)
-│   ├── data_cleaning.ipynb         # Step 1 — data normalization and anonymization
+│   ├── utils.py                            # Shared utilities (plotting, parsing, statistics)
+│   ├── data_cleaning.ipynb                 # Step 1 — data normalization and anonymization
 │   ├── demographic_characterization.ipynb  # Step 2 — participant characterization
-│   ├── RQ1.ipynb                   # Step 3 — perception and prioritization (Q9–Q16)
-│   ├── RQ2.ipynb                   # Step 4 — implementation practices (Q17–Q20)
-│   └── RQ3.ipynb                   # Step 5 — challenges and support (Q21–Q22)
+│   ├── RQ1.ipynb                           # Step 3 — perception and prioritization (Q9–Q16)
+│   ├── RQ2.ipynb                           # Step 4 — implementation practices (Q17–Q20)
+│   └── RQ3.ipynb                           # Step 5 — challenges and support (Q21–Q22)
 ├── paper /
 │   └── SBES___2026___Kevin___Data_Quality_Requirements_in_ML_Enabled_Systems.pdf
+├── survey artifacts/               # Consent forms and survey scripts
+│   ├── Free and Informed Consent Form (FICF)_data_quality_en.pdf
+│   ├── Script_survey_data_quality_EN.pdf
+│   ├── Script_survey_data_quality_PT_BR.pdf
+│   └── Termo_de_Consentimento_Livre_e_Esclarecido_(TCLE)_data_quality_pt_br.pdf
 ├── requirements.txt
 ├── .gitignore
 ├── README.md
