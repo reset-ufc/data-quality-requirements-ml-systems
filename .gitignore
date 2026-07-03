@@ -218,18 +218,3 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
-
-# Project data and generated artifacts
-# Keep all data ignored by default, then explicitly allow only placeholders
-# and the raw source spreadsheet used in replication.
-data/**
-!data/
-!data/codebook/
-!data/codebook/**
-!data/raw/
-!data/**/.gitkeep
-data/raw/**
-!data/raw/survey_responses.xlsx
-!data/raw/survey_responses_2.xlsx
-!data/raw/parcial_quali.xlsx
-!data/raw/full_quali.xlsx

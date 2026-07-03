@@ -1,0 +1,382 @@
+respondent_id,question,response
+0,re_experience,"Sim, foi uma ótima experiência, embora complicada."
+1,re_experience,Não 
+2,re_experience,"Geralmente,  são os primeiros passos quando começamos um projeto aqui."
+3,re_experience,"Trabalho em um projeto a dois anos onde desenvolvemos uma ferramenta que utiliza ML e visão computacional. Durante esses dois anos só foram levantados requisitos dos softwares que envolviam a ferramenta (web, mobile, api) mas não do modelo de ML em si, que era desenvolvido exclusivamente pela equipe de IA. Apenas durante os últimos meses levantei a necessidade de termos requisitos claros estabelecidos para o modelo, para alinhar o comportamento e performance desse as expectativas dos stakeholders. Realizei pessoalmente, com auxílio do time de QA, a definição e documentação de requisitos do modelo. A partir disso, ficou muito claro como e o que era necessário testar no modelo para garantir a qualidade. Isso nos permitiu ir além das métricas tradicionais obtidas com hold-out validation e obter análises mais completas."
+4,re_experience,Já participei de todas as fases do ciclo de um projeto em Ciência de Dados.
+5,re_experience,Não 
+6,re_experience,Não
+7,re_experience,"Já participei de projetos de diversas aplicações, metodologias e tecnologias usadas. Projetos de dados na área de engenharia analise e ciencia de dados para principalmente economia, educação, saúde"
+8,re_experience,"Registro formal dos requisitos em documentos detalhados, que podem incluir especificações funcionais e não funcionais, casos de uso."
+9,re_experience,"Ainda não tive experiência com requisitos em projetos maiores,  apenas em trabalhos acadêmicos."
+10,re_experience,"Sim, já participei de alguns processos de elicitação de requisitos, como análise de documentos e entrevistas semiestruturadas."
+11,re_experience,Nunca participei.
+12,re_experience,"Sim, já participei e principalmente em disciplinas na universidade. Não é a etapa do projeto que mais me instigou, mas achei de extremamente importância porque era o que nos guiava tanto no desenvolvimento como a compartilhar as etapas de desenvolvimento com quem não participava do projeto."
+13,re_experience,"Nesse caso, minha experiência nessa parte é mais voltada para a documentação do código e na criação de diagramas referentes a pipelines,  já participei de algumas auditorias feitas pelo time de requisitos mas não me considero uma pessoa com experiência na área. "
+14,re_experience,Somente documentação de dependências e bibliotecas.
+15,re_experience,"Sim, já participei de processos de refinamento de requisitos, onde discutimos com a equipe a complexidade e capacidade do time para construir as soluções."
+16,re_experience,"Sim, participo e acontece no escopo analise e desenho dos processos de negócio implicados na mudança resolvida com o projeto. "
+17,re_experience,Não
+18,re_experience,Sim
+19,re_experience,"Diria que minha experiência em Engenharia de Requisitos é limitada; seria mais preciso dizer que tenho bastante experiência na coleta de requisitos. Já participei de diversas definições, análises e documentações breves, mas os prazos sempre foram extremamente curtos para realizar um estudo aprofundado. Isso ocorre porque, muitas vezes, é necessário propor uma solução rapidamente e submetê-la para aprovação. Além disso, a postura do cliente influencia bastante esse processo. Frequentemente, investimos muito tempo tentando extrair dele os pontos-chave daquilo que ele acredita precisar, para então conseguirmos estruturar minimamente as informações. É claro que isso varia conforme o porte da empresa. Empresas com menor capital tendem a ser mais exploratórias e desorganizadas, enquanto as de capital elevado costumam ser mais restritivas e objetivas. No entanto, sempre há exceções, e algumas grandes empresas fazem exigências tão peculiares que acabam dificultando ainda mais a estruturação do projeto."
+20,re_experience,Nunca participei de atividades de engenharia de requisitos
+21,re_experience,…
+22,re_experience,Documentar sobre os requisitos funcionais como integracoes utilizando API e cadastros de usuarios
+23,re_experience,"Esse processo é bem trabalhoso e demorado, pois é preciso ter o entendimento do contexto de negócio e como os dados estão conectados. Além disso, na maioria das vezes, as regras e validações do que deve ser feito está na cabeça do usuário, e existe uma dependência destes especialistas para que a solução seja definida ou entendida."
+24,re_experience,Não 
+25,re_experience,"Desde sempre participei de atividades de requisitos nos projetos que atuei, em alguns momentos, com menos interações, mas nos últimos cinco anos com grande interação. Nesse sentido, minha atuação visa descrever e avaliar a viabilidade nessa fase de concepção."
+26,re_experience,"sim, já atuei na engenharia de requisitos. Sempre foi a etapa crucial para a definição de um bom escopo, evitando atritos entre a equipe e o cliente e preservando prazos e bem estar de trabalho."
+27,re_experience,"Participei da elicitação de requisitos para um módulo de um software que iria buscar e processar dados de um data warehouse. Foi feito de maneira informal com os membros relevantes do time em uma reunião, sem a geração de um documento formalizando tudo (apenas uma task aberta no kanban com as descrições do que foi discutido. "
+28,re_experience,Participei de algumas jornadas de usuário conversando com clientes para entender como um um produto de IA poderia ajudar no cotidiano do público alvo.
+29,re_experience,"Participei na melhoria de requisitos do meu projeto atual. Nesse processo sempre é feita uma reunião com o cliente onde ele faz o levantamento dos cenários e casos que ele deseja obter. Ao final dessas reuniões, fazemos a criação das Histórias, Cenários e Requisitos Funcionais e Não Funcionais. Uma vez concluído esse processo, o cliente então os revisa e, se necessário, os corrige. Esse é um processo interativo, até o momento me que tanto o cliente como nós desenvolvedores chegarmos num consenso."
+30,re_experience,"Sim, já participei de todas as fases. Geralmente realizada através da análise de sistemas anteriores e documentações existentes, além de entrevistas e confecção de protótipos."
+31,re_experience,Não
+32,re_experience,"Eu sempre participo. Inicialmente, as necessidades dos clientes são identificadas. Posteriormente são priorizadas e descritas. As tarefas são divididas em sprints e estimadas nas reuniões de planejamento. Os devs recebem as tarefas de acordo com o capacity e senioridade/especialidade. Utilizamos scrum e kanbam. As tasks são entregues de forma continua em pequenos pacotes de atualizações."
+33,re_experience,Normalmente não participo muito na etapa de engenharia de requisitos.
+34,re_experience,"Em alguna projetos sim, nesse caso procuro fontes de dados confiaveis que tem relacao ao problema a ser resolvido. As vezes os dados que temos nao tem relacao real com o.problema, ou nao se sabe de fato qual é o problema "
+35,re_experience,Não tenho experiência
+36,re_experience,"É um processo oneroso, mas se bem feito é extremamente útil no projeto. O que acaba sendo chato são as atualizações necessárias no documento para que ele se mantenha relevante."
+37,re_experience,I usually do not focus on Req.
+38,re_experience,"Yes, I worked all the stages (Filtering, pré-processing, normalization, training, testing, etc.)"
+39,re_experience,"He estado involucrada en definición, análisis, inplemenracion, pruebas y documentación "
+40,re_experience,"I have expirience on design and developing GenAI soluctions. I Had this kind of expirience on developing chatbot, Diagnóstico Assistant, class planninh generator and text-tosql"
+41,re_experience,"defining, adjusting requirements along with the changes in the understanding of the project, new requirements from stakeholders, impossibility to fulfill some requirements in accordance with technology state"
+42,re_experience,"No, zero experience"
+43,re_experience,"As a product owner I often participate in workshops, interviews to gather requirements with business analysts and other stakeholders  "
+44,re_experience,"Requirements? Oh yeah, definitely. I've been in the trenches with that. Defining, analyzing, documenting – all of it. It's usually a mix of trying to figure out what people really need, and then wrangling that into something usable. Some projects are smooth, some are...less so. But it's always interesting, and crucial to getting things right."
+45,re_experience,"I'm from a mecatronic/mechanical background all the projetcs that I was involved were related to engineering, in my experience work with engineering projects don't constitute a problem."
+47,re_experience,no
+48,re_experience,It is a auto parking project which we aims on parking perception tasks.
+49,re_experience,"i wrote lightweight requirements briefling touching on behaviour (including constraints), features"
+50,re_experience,Customer Churn Modeling in Card products. Talking to the business stakeholders to understand the definition of the churn for the business
+52,re_experience,"As a tech lead, I have been directly involved in defining, analyzing, and documenting requirements. This process usually involves coordinating with stakeholders (POs, CPO, etc) to understand business needs, define expectations, and translate those requirements into technical specifications and tasks."
+53,re_experience,"Minha atuação na área de ER sempre esteve restrita a pressupostos metodológicos, atuando mais como um usuário de documentação de requisitos do que alguém atuante na definição dos mesmos (com exceção dos casos pontuais nos quais foi necessária uma intervenção da minha parte para corrigir um equívoco da documentação ou concluir pela inexequibilidade do requisito para um projeto)."
+54,re_experience,I've only made very small personal projects so i basically did little to no requirements engineering.
+55,re_experience,"I do this very little and in a more incremental way. At work, we usually get ahead of client requests, so we bring prototypes to gather feedback. From there, we keep improving the project and adapting the requirements in practice."
+7,imp_justification,"Se os dados forem uma bagunça, o modelo só vai cuspir lixo sofisticado"
+11,imp_justification,"Todas as características são importantes ou muito importantes. A separação que fiz foi mais pensando em algo que podemos fazer/corrigir em um segundo momento ou algo que é fundamental de ser pensado desde o início. Considero que algo que se reflete na qualidade dos dados, da informação presente naquele dado são coisas inegociáveis desde o momento inicial. Já questões de documentação, tornar esses dados acessíveis e consistentes entre diferentes base de dados podem ser corrigidas no decorrer do processo, apesar de serem também muito importantes."
+12,imp_justification,"Para mim todas as características são de extrema importância, pois a garantia delas influenciam muito positivamente o desenvolvimento de sistemas que utilizam aprendizado de máquina. Dados de má qualidade (e aqui má qualidade vai desde a falta de disponibilidade a dados com pouca precisão e pouco representativos) são um grande problema na área e dificultam o desenvolvimento de novas técnicas."
+14,imp_justification,"Os dados precisão refletir com eficiência e sem muitos erros, ao qual ele é proposto ou indica, os dados precisam ser compreensíveis até certo ponto para os humanos, precisam ser confiáveis, em termos de garantir que a informação final não esteja errada se comparada ao esperado no mundo real. "
+16,imp_justification,Dependem do escopo do projeto e o do objetivo do aprendizado 
+17,imp_justification,"Para a elaboração de sistemas de ML corretos e efetivos, os dados precisam ser consistentes, completos e precisos. Se isso não acontecer, todo o resultado proveniente do seu pipeline de ML pode estar comprometido. A conformidade é importante para a própria construção dos pipelines, já que os seus dados precisam estar padronizados para serem alimentados no seu sistema de ML. Quanto a confiabilidade e a rastreabilidade, a primeira relaciona-se à consistência, o que é essencial em sistemas de ML, enquanto a última é super importante para a execução de testes com dados mais antigos, realização de debugs ou até mesmo processos de rollback."
+19,imp_justification,"Consigo imaginar diversos cenários em que todas essas palavras são extremamente importantes de alguma forma. No entanto, acredito que há uma diferença entre algo ser importante e ser necessário para um projeto, especialmente quando se trata de um projeto piloto. Muitas vezes, esses dois aspectos entram em conflito, pois a importância de certos elementos é limitada pela urgência dos prazos, impedindo que coexistam de maneira adequada."
+25,imp_justification,"São critérios relevantes, mas que não promovem impedimentos."
+26,imp_justification,"Dados mais atuais, precisos e coerentes com o cenário real tendem a apresentar resultados melhores na fase de análise dos modelos em relação as métricas de acerto."
+29,imp_justification,"
+Dada a negligência à esses pontos levantados, os modelos criados podem não refletir o objetivo pretendido pelo desenvolvedor/pesquisador. Ou em casos piores, podem levar a resultados que podem parecer promissores, mas que em uma análise mais profunda pode estar relacionada à dados que não são devidamente limpos e precisos."
+30,imp_justification,"Se o dado não tiver a maioria desses atributos, qualquer resultado de qualquer modelo de ML não será confiável"
+31,imp_justification,"Acredito que os dados devem ser confiáveis e fazer sentido, pois é fundamental pra que o sistema funcione corretamente quando for colocado em produção. Para tomar decisões com base nesses dados,  a informação deve ser precisa e consistente."
+32,imp_justification,"O mais fundamental é que os dados precisam ser não-ambíguos pois a tomada de decisão precisa ser assertiva. Executar uma ação crítica como por exemplo bloquear o cartão de um cliente 5 estrelas é péssimo. Os dados precisam estar sempre disponíveis, consistentes e atuais. Eu vejo uma grande relação entre consistência e atualidade. Por exemplo, um cliente pode ser tornar inadimplente a qualquer momento. Dados atuais são essenciais principalmente para startups."
+33,imp_justification,Precisão é importante pois um dado impreciso causaria erros de aprendizado e predição nos modelos que aprenderiam com esses dados.  Completude é importante pois na vida real o modelo utilizado poderia simplesmente não ser capaz de prever uma observação corretamente pois o dado de treinamento utilizado para este modelo falta exemplos suficientes daquele tipo de dado. 
+34,imp_justification,"Acredito que todas as características são importantes,  e precisam serem.levadas para o uso industrial. Em algum nível."
+36,imp_justification,Os itens marcados como importantes não sinalizam que os modelos serão menos performáticos. Ainda é possível extrair boas métricas tendo uma base de dados que possui os itens demarcados como muito importantes.
+37,imp_justification,Completeness because incomplete data can minimize usefulness of the ML system derived.
+38,imp_justification,Because wrong data means wrong results
+41,imp_justification,incompleteness of data may significantly bias the model. Highly depend  on the project. 
+47,imp_justification,"you expalined acc. but in rating scale you ask for prec.
+i ranked them as important as they are needed for the reproducibility of the results, whcih is important to have cumulative knowlede."
+48,imp_justification,Industrial engineering consider things differently
+12,pri_justification,"São as características que vejo como essenciais para reproduzir técnicas, seja para fins de pesquisa ou mercado. A garantia delas influencia também em um desenvolvimento mais rápido."
+15,pri_justification,Confiabilidade para garantir que os dados realmente refletem a área de conhecimento que está como alvo.
+19,pri_justification,"Consigo imaginar diversos cenários em que todas essas palavras são extremamente essenciais também. Mas vai depender demais do projeto em questão, então prefiro colocar neutro. "
+20,pri_justification,"Todos requisitos são essenciais dependendo do contexto.
+A precisão, por exemplo, vai depender do grau do erro dos dados e o quão preciso é necessário que a solução de AM seja. Mas em geral, ter um certo nível de precisão é essencial para qualquer contexto.
+
+A conformidade depende do quão sensíveis forem os dados. Em dados hospitalares ou bancários por exemplo, esse aspécto é super importante.
+
+A eficiência vai depender se o sistema é utilizado em tempo real ou não.
+
+Enfim cada característica dessas é essencial dependendo do contexto. Tentei marcar com mais importância aquelas que são mais comuns em mais contextos.
+
+"
+25,pri_justification,"São critérios prioritário, mas não impactam requisitos funcionais."
+26,pri_justification,"A consistência e completude indicarão o quanto os dados de fato representam ou não os cenários de um ambiente real, o modelo tenderá a ser melhor acertivo se estes aspectos forem priorizados."
+29,pri_justification,"Os pontos marcados como prioritário, se não considerados no inicio do projeto, podem levar a modelos que podem ter problemas de overfitting ou underfitting. Isso com o tempo pode até ser corrigido, porém é algo que pode ser prevenido com dados que já tenham uma credibilidade, precisão e consistência por exemplo."
+30,pri_justification,"Mesmo motivo. Todo dado utilizado na execução de algortimos de ML deve ter qualidade, senão todo resultado será duvidoso e não confiável. Não existe meio termo."
+31,pri_justification,"Acredito que os dados devem ser confiáveis e fazer sentido, pois é fundamental pra que o sistema funcione corretamente quando for colocado em produção. Para tomar decisões com base nesses dados,  a informação deve ser precisa e consistente."
+32,pri_justification,"Quanto mais consistentes os dados, melhor a classificação."
+0,balance_open,"Equilibrar precisão, compreensibilidade e eficiência computacional exige escolhas estratégicas. Para modelos críticos, como risco de crédito, priorizamos interpretabilidade (árvores de decisão). Em visão computacional móvel, sacrificamos um pouco de precisão por eficiência (MobileNet). Já em detecção de fraudes, combinamos regras simples (rápidas e explicáveis) com machine learning sofisticado."
+1,balance_open,"A prioridade é na precisão dos dados, seguido de compreensibilidade e eficiência "
+2,balance_open,Tudo vai depender de como nossa aplicação precisará responder ao usuário 
+4,balance_open,"Equilibrar precisão, compreensibilidade e eficiência computacional no desenvolvimento de sistemas de aprendizado de máquina exige decisões estratégicas que dependem do contexto do projeto."
+5,balance_open,"Equilibrar precisão, compreensibilidade e eficiência computacional em aprendizado de máquina exige priorização baseada no contexto do projeto. Uso técnicas como seleção de features, redução de dimensionalidade e limpeza de dados para manter a representatividade sem comprometer a interpretabilidade. Modelos mais simples podem ser preferíveis quando a explicabilidade é essencial, enquanto modelos complexos são escolhidos quando a precisão é prioridade. Além disso, monitoro continuamente o desempenho do sistema para ajustar esse equilíbrio conforme necessário."
+6,balance_open,.
+7,balance_open,"o segredo é encontrar o ponto ideal entre complexidade e praticidade, garantindo um modelo robusto e utilizável"
+8,balance_open,"Cada decisão deve ser baseada no contexto específico do projeto e nos objetivos finais, garantindo que a qualidade dos dados seja mantida sem sacrificar outras necessidades críticas."
+9,balance_open,Não sei descrever 
+10,balance_open,Essas características são essenciais para a entrega de valor e resultados eficientes no âmbito da engenharia e análise de dados.
+11,balance_open,"Geralmente o foco se dá inicialmente na qualidade dos dados em termos de serem precisos, completos e atuais. Em um segunda momento pensamos na questão do usuário do sistema e como tornar esse dados mais legíveis. Finalmente, em como otimizar o processamento/pipeline tornando melhor a experiência."
+12,balance_open,"Até agora não participei precisamente do desenvolvimento de um sistema que usa aprendizado de máquina, pois só trabalhei com isso no mestrado. Eu trabalho com imagens médicas, a conciliação que precisei fazer foi basicamente entre a falta de consistência (no que se refere a possuir contradição entre diferentes fontes) e atualidade (de um ponto de vista geográfico, por não representar a população brasileira) com compreensibilidade (pois são dados que possuem documentação clara), disponibilidade, acessibilidade e principalmente com credibilidade, pois são dados disponibilizados por uma agência da Organização das Nações Unidas. E tudo isso será documentado, deixando claro como foi o processo de obter esses dados e como entrar em contato para tal."
+13,balance_open,"Atualmente sempre venho dando mais ênfase na precisão dos dados, seguido da compreensibilidade e eficiência. Dou prioridade para essa ordem por alguns motivos, o principal deles sendo que (em minhas experiências) quando se utiliza um dataset que não representa dados reais ou realmente representativos do que queremos que os modelos de aprendizado de máquina aprendam o resultado não é satisfatório, a compreensibilidade vem logo em seguida pois facilita tanto o trabalho de ETL (carregar os dados para treinar os modelos) tanto para futura documentação e demonstração dos resultados obtidos pelos modelos, e por fim a eficiência computacional visto que também é preciso manter a capacidade de rodar os modelos com o hardware que for usado. Uma situação que me recordo foi quando estive numa equipe e tivemos que fazer uma escolha entre dois datasets que tinhamos disponíveis para utilizar em um projeto, um deles mais robusto que o outro porém que iria demandar muito mais poder computacional para treinar os modelos em cima dele, no fim acabamos escolhendo ele por representar melhor o tipo de dado que queriamos apresentar no final do projeto. "
+14,balance_open,"Em visão computacional, os dados agrupados formam uma informação sobre a imagem, essa informação precisa ser precisa a imagem, compreensível pela máquina e a depender da quantidade, não pode ser muito grande, ou seja, precisa ser direta e com exatidão. "
+15,balance_open,"As vezes os dados podem não estarem completos, mas a confiabilidade pode ser mais alta."
+16,balance_open,"Varia segundo o objetivo do aprendizado, fontes e metricas dos rótulos "
+17,balance_open,"Deve-se sempre entender o problema a ser solucionado para dar importância maior para uma característica em detrimento de outras. A completude, por exemplo, é uma característica muito importante já que os dados precisam estar ""completos"" para serem alimentados em um sistema de ML. A consistência e a credibilidade, por exemplo, podem ser características a serem balanceadas. Por vezes, encontramos inconsistências em nossas fontes de dados e precisamos optar pela fonte de maior credibilidade"
+18,balance_open,O problema é quando os dados nao sao consitentes o incopletos a inferência e resultado final o cliente pode ser confuso e incompleto. Precisa de refazer o processo varias vezes isso leva a gastos de infra em todo o fluxo
+19,balance_open,"O que costumo ver com muita frequência é ver primeiro o resultado e depois avaliar como ele poderia ser melhorado, revisitando essas características. Aqui depende muito do tipo do projeto também."
+20,balance_open,"Realmente depende do contexto. Atualmente participo de um projeto que trata anamneses de hospitais. Para manter a conformidade, abordamos soluções de aprendizado de máquina federado, onde os dados permanecem locais."
+21,balance_open,"No geral boas ferramentas de mercado como o databricks ajuda o cientista de dados a focar na solução, pois isso é tratado de forma estratégica e inteligente pelo sistema. Resumindo, escolha bem sua plataforma e defina bem os requisitos do sistema."
+22,balance_open,"Nao desenvolvi nenhum sistema com AM mas quando desenvolvo tudo faco por fazer para cada pilar como: disponibilidade, seguranca, confiabilidade e boas praticas"
+23,balance_open,São características que definem a qualidade do dado para ser utilizado em soluções de IA
+24,balance_open,"Eu tento, tudo depende do problema a ser solucionado o conjunto de dados que eu tenha disponível. Após conhecer a amostra começo a tomar decisões sobre como.pafronizacao, o que deve ser removido ou incrementado, tentando remover os possíveis ruídos para melhorar o.resultados finais "
+25,balance_open,"Ser preciso é uma necessidade de negócio em sistemas de Aprendizado de Máquina e isso deve requerer confiabilidade, o que pode impactar na eficiência computacional. Sob esta fala, sistemas de análises médicas permeiam o cenário descrito, afinal imagens clínicas geralmente têm alta resolução pois demandam confiabilidade para apresentação dos laudos. Ou seja, essas imagens representam grandes volumes de dados, impactando na eficiência computacional desse sistema."
+26,balance_open,"Dependerá da aplicação, se há requisitos de tempo real ou não, se o tempo de espera para a resposta do modelo é algo sensível ou não, pois isso pode levar a uma maior flexibilidade quanto as taxas de acerto e pririzando a eficiência."
+27,balance_open,"Algumas características, como Precisão, Completude, Consistência, Credibilidade eu considero essenciais não importa a situação, pois sem esses pontos todos os passos seguintes num fluxo de ciência de dados se tornam irrelevante, pois o resultado deixa de ser confiável (ou seja afeta negativamente a Confiabilidade). Na minha opinião, se o produto final não é confiável ele não deveria estar em produção. Apenas para fins de pesquisa de existe um valor em dados e modelos menos confiáveis (mas todo o trabalho deve ser feito sabendo desse problema.)   Caso esses problemas não sejam identificados e passem por exemplo até o passo de treinamento de um modelo, onde se descobre que o modelo não é confiável, torna-se importante outros fatores como Rastreabilidade e Recuperabilidade para permitir que sejam identificados os problemas e caso necessário que seja gerado um conjunto corrigido de dados caso possível.  Com relação a outras características dos dados, tudo depende de qual será a aplicação. Atualidade, especificamente, é um grande exemplo de uma característica que pode ser extremamente prioritária para certas aplicações (como por exemplo meteorologia, serviços críticos, bancários, etc.) mas que também pode ser desnecessário dependendo do objetivo.   Com relação as outras características não mencionadas, como compreensibilidade e disponibilidade, creio que para fins de pesquisa são importantes, mas pensando num fluxo de construção de produto que iria para a produção, a ideia é que tendo uma aplicação já pronta, esses fatores seriam menos importantes até que fosse necessária uma atualização do produto. No geral, eu acredito que essas características são mais importantes para o produto final do que para os dados."
+28,balance_open,"Em sistemas biométricos que trabalhei, a eficiência era um ponto bem critico, pois não poderíamos aceitar falsos positivos. Nesses casos tínhamos etapas de limpezas bem complexas priorizando a questão da eficiência e precisão posterior dos algoritmos de identificação a serem treinados. Em outros casos como classificação de texto, houveram sim preocupações com compreensibilidade, e menos com eficiência, sendo que nesses esse casos trabalhávamos com rankeamento, e a classificação tinha uma etapa de validação humana após a execução do modelo treinado."
+29,balance_open,Através dos treinamentos com diferentes configurações e diferentes tipos de dados. Através desse tuning inicial é possível inclusive excluir dados que não venham a acrescentar muito no resultado final do modelo pretendido. Uma Feature Selection pode ser utilizada nesse sentido.
+30,balance_open,"Dependendo do problema/domínio sendo estudado, esse equilíbrio pode variar. Por exemplo, situações que lidam com saúde, vida e morte, por exemplo, deve considerar apenas dados de boa qualidade com relação a todas as características. Qualquer dado não confiável deve ser eliminado. Em outros casos, talvez possamos ser menos rigorosos com relação a alguma caracaterística."
+31,balance_open,.
+32,balance_open,Depende muito do projeto. Projetos que envolvem saúde ou dinheiro são mais críticos em relação à alguns pontos. Agora alguns tipos de classificação podem ter outras prioridades.
+33,balance_open,"Dependendo da situação, infelizmente talvez não tenhamos opções nem de equilibrar. Mas completude, precisão, e credibilidade devem ser prioritários."
+34,balance_open,"Depende da criticisade do modelo, onde ele vai ser implementado e as politicas da equipe de trabalho. Muitas vezes conciliar as caracteristicas tem.uma relacao maior com o trabalho da equipe do projeto e os prazos de entrega. Ainda temos dificuldade de que  vonsiderem o estudo previo dos dados como entregavel de uma sprint pois acham que modelos sao como pasteis, feitos rapidos, com qualquer dados e tecnologia. E  resolve o mundo"
+35,balance_open,"Faço muito uso de dados desequências de DNA, tais caracteristicas estão relacionadas com a plataforma que se utiliza, sendo assim tento manter sempre plataformas atualizadas "
+36,balance_open,"É procurar entregar um MVP com os dados que temos. Em seguida, deixar nas mãos do negócio para decisões de onde o projeto irá."
+37,balance_open,"If a human could not do proper desicions on data due to its flaws, then one should be careful."
+38,balance_open,They are very important and we must consider all of them
+39,balance_open,"Detención de anomalías y valores atípicos o datos incompletos, se toma la decisión de corregir estos errores, eliminar los outliers.
+Preparación y procesamiento de datos, realizando transformaciones o codificación de datos para garantizar la completitud y la consistencia"
+40,balance_open,I have never handled with this issue
+41,balance_open,"Based on the scale of the project, mostly focused on accuracy and utilising cloud solutions for computational efficiency. Made peace with the fact that black box algorithms exist and not everything could be explained"
+42,balance_open,"It depends, each case is different"
+43,balance_open,"To be honest I dont look at computacional efficiency and Im not sure if the data scientists of my team do this. Typically, we dont negotiate these attributes. We simply work on the data we have available. "
+44,balance_open," It's a trade-off. Accuracy vs. speed, mostly. For medical, accuracy wins. For real-time, speed. We try to keep things understandable, but project goals dictate the balance."
+45,balance_open,"In the early stages of development, the most important factor is achieving high accuracy, even if the code is not optimized or easy to understand. Some optimizations can be performed early on to speed up computations, but only if they don't consume a large portion of the available development time. In the final stages of development, meetings can be scheduled to discuss comprehensibility and determine how improvements will be implemented"
+46,balance_open,"I don't know, really not familiar with this area."
+47,balance_open,"the availibility and similar of data was more important than the efficiency, thats then a later prolem and task for implementing efficient dataloaders, but without the date next steps are obsolete"
+48,balance_open,"What everyone cares is the training result, as a mature engineer it should be essential to make system work then consider other priorities "
+49,balance_open,"For me, balancing data quality characteristics fundamentally depends on the required metrics of the ML model being built and the domain of the data. 
+
+If precision is the utmost priority,  for instance in a high-stakes classification task , I would favor data accuracy, credibility, and timeliness over attributes like computational efficiency. 
+
+On the other hand, in a task like text classification where introducing false positives haves little harm, precision in the data becomes less critical, and I will instead prioritize completeness, accessibility, and traceability. 
+An example from my research is my work on design discussion detection using transformer models, where the scarcity of labeled data and high annotation costs meant I had to prioritize data completeness and accessibility — accepting a reduced but well-curated dataset — over having a perfectly precise, fully annotated corpus. So basically, the ML model's target metrics and the risk profile of its errors should always drive which data quality characteristics you optimize for."
+50,balance_open,It really depends on the business requirements and the problem that we are solving
+51,balance_open,"In Finance, the focus was often on speed and precision. In Healthcare, the focus is more on explainability and safety."
+52,balance_open,"I balance them according to the desired goals and the systems constraints. For example, in IoT or real-time systems, I would prioritize efficiency. In contrast, in critical systems, I would prioritize accuracy and reliability. The decision depends on how the model will be used in practice."
+53,balance_open,"Em específico para essas características definidas no enunciado, é fácil equilibrá-las, já que não existe competitividade entre elas. Contudo, entendo que, uma vez que a precisão dos dados tenha sido alcançada e que a compreensão a respeito deles tenha sido garantida (seja pela clareza da documentação, compreensão da equipe de desenvolvimento ou pela presença de um ""especialista de domínio""), o ponto crítico é a eficiência, que deve ser garantida tanto pelo tratamento dos dados quanto pela infraestrutura utilizada para o processamento: 1) é preciso que os dados sejam otimizados para o processamento (recentemente, consegui tonar um projeto exequível passando os dados do formato separado por vírgulas -- csv -- para o formato apache parquet, geralmente utilizado em projetos de Big Data e, assim, o tornei mais eficiente, passando-o de 8gb para 800mb); 2) contudo, para tudo há um limite e, por vezes, é necessário decidir se não seria estratégico realizar um upgrade vertical ou horizontal da infraestrutura física utilizada, opções essas dentre as quais o último caso (scale-out) costuma apresentar resultados melhores, por se tratar de um processamento distribuído. "
+54,balance_open,"In one of my latest machine learning projects using an adult income dataset, I chose a logistic regression model, a decision that prioritized an interpretable and reproducible architecture over more complex models. Furthermore, to reconcile computational efficiency with predictive power, I created a new atribute (capital-net) by consolidanting both capital gain and loss, simplifying the input matrix while retaining essential data."
+55,balance_open,"Balancing data quality in real-world machine learning projects is essentially a constant game of trade-offs, as you can rarely optimize for everything at once. For instance, highly accurate models demand massive amounts of computing power, so you often have to settle for a slightly less precise but much faster model just to make it practical to run in production. Similarly, while neatly organized and highly structured databases are great for developers to read and understand, they are notoriously slow for training, meaning we usually end up flattening the data into ugly, denormalized tables so the algorithms can ingest them efficiently. Even when building the dataset itself, trying to keep every single messy record just to maximize completeness usually introduces too much noise, making it far better to simply throw out the bad data and accept a smaller dataset in exchange for a much more accurate and reliable model."
+0,incorporation_open,"Avaliação inicial durante a coleta e preparação de dados, Monitoramento contínuo durante todo o ciclo de vida do modelo, Conjuntos de testes são aplicados para validar a consistência, completude e precisão dos dados antes de serem usados no treinamento."
+1,incorporation_open,"Avaliação inicial durante a coleta e preparação de dados, Monitoramento contínuo durante todo o ciclo de vida do modelo"
+2,incorporation_open,"Avaliação inicial durante a coleta e preparação de dados, Monitoramento contínuo durante todo o ciclo de vida do modelo, Conjuntos de testes são aplicados para validar a consistência, completude e precisão dos dados antes de serem usados no treinamento."
+3,incorporation_open,Avaliação inicial durante a coleta e preparação de dados
+4,incorporation_open,"Avaliação inicial durante a coleta e preparação de dados, Monitoramento contínuo durante todo o ciclo de vida do modelo"
+5,incorporation_open,"Monitoramento contínuo durante todo o ciclo de vida do modelo, Conjuntos de testes são aplicados para validar a consistência, completude e precisão dos dados antes de serem usados no treinamento."
+6,incorporation_open,"Avaliação inicial durante a coleta e preparação de dados, Conjuntos de testes são aplicados para validar a consistência, completude e precisão dos dados antes de serem usados no treinamento."
+7,incorporation_open,"Avaliação inicial durante a coleta e preparação de dados, Monitoramento contínuo durante todo o ciclo de vida do modelo, Conjuntos de testes são aplicados para validar a consistência, completude e precisão dos dados antes de serem usados no treinamento."
+8,incorporation_open,Avaliação inicial durante a coleta e preparação de dados
+9,incorporation_open,Não existe uma estratégia formal para assegurar a qualidade dos dados durante o desenvolvimento.
+10,incorporation_open,"Avaliação inicial durante a coleta e preparação de dados, Monitoramento contínuo durante todo o ciclo de vida do modelo, Conjuntos de testes são aplicados para validar a consistência, completude e precisão dos dados antes de serem usados no treinamento."
+11,incorporation_open,Não existe uma estratégia formal para assegurar a qualidade dos dados durante o desenvolvimento.
+12,incorporation_open,"Conjuntos de testes são aplicados para validar a consistência, completude e precisão dos dados antes de serem usados no treinamento."
+13,incorporation_open,"Avaliação inicial durante a coleta e preparação de dados, Monitoramento contínuo durante todo o ciclo de vida do modelo, Conjuntos de testes são aplicados para validar a consistência, completude e precisão dos dados antes de serem usados no treinamento."
+14,incorporation_open,"Avaliação inicial durante a coleta e preparação de dados, Monitoramento contínuo durante todo o ciclo de vida do modelo"
+15,incorporation_open,"Conjuntos de testes são aplicados para validar a consistência, completude e precisão dos dados antes de serem usados no treinamento."
+16,incorporation_open,Monitoramento contínuo durante todo o ciclo de vida do modelo
+17,incorporation_open,"Avaliação inicial durante a coleta e preparação de dados, Monitoramento contínuo durante todo o ciclo de vida do modelo, Conjuntos de testes são aplicados para validar a consistência, completude e precisão dos dados antes de serem usados no treinamento."
+18,incorporation_open,"Avaliação inicial durante a coleta e preparação de dados, Monitoramento contínuo durante todo o ciclo de vida do modelo, Conjuntos de testes são aplicados para validar a consistência, completude e precisão dos dados antes de serem usados no treinamento."
+19,incorporation_open,Não existe uma estratégia formal para assegurar a qualidade dos dados durante o desenvolvimento.
+20,incorporation_open,"Avaliação inicial durante a coleta e preparação de dados, Conjuntos de testes são aplicados para validar a consistência, completude e precisão dos dados antes de serem usados no treinamento."
+21,incorporation_open,"Avaliação inicial durante a coleta e preparação de dados, Monitoramento contínuo durante todo o ciclo de vida do modelo, Conjuntos de testes são aplicados para validar a consistência, completude e precisão dos dados antes de serem usados no treinamento."
+22,incorporation_open,Nao participei de nenhum diretamente
+23,incorporation_open,"Avaliação inicial durante a coleta e preparação de dados, Conjuntos de testes são aplicados para validar a consistência, completude e precisão dos dados antes de serem usados no treinamento."
+24,incorporation_open,"Avaliação inicial durante a coleta e preparação de dados, Não existe uma estratégia formal para assegurar a qualidade dos dados durante o desenvolvimento."
+25,incorporation_open,"Conjuntos de testes são aplicados para validar a consistência, completude e precisão dos dados antes de serem usados no treinamento."
+26,incorporation_open,"Avaliação inicial durante a coleta e preparação de dados, Conjuntos de testes são aplicados para validar a consistência, completude e precisão dos dados antes de serem usados no treinamento."
+27,incorporation_open,"Avaliação inicial durante a coleta e preparação de dados, Conjuntos de testes são aplicados para validar a consistência, completude e precisão dos dados antes de serem usados no treinamento."
+28,incorporation_open,"Avaliação inicial durante a coleta e preparação de dados, Monitoramento contínuo durante todo o ciclo de vida do modelo, Conjuntos de testes são aplicados para validar a consistência, completude e precisão dos dados antes de serem usados no treinamento."
+29,incorporation_open,"Avaliação inicial durante a coleta e preparação de dados, Monitoramento contínuo durante todo o ciclo de vida do modelo"
+30,incorporation_open,Avaliação inicial durante a coleta e preparação de dados
+31,incorporation_open,"Avaliação inicial durante a coleta e preparação de dados, Monitoramento contínuo durante todo o ciclo de vida do modelo"
+32,incorporation_open,"Avaliação inicial durante a coleta e preparação de dados, Conjuntos de testes são aplicados para validar a consistência, completude e precisão dos dados antes de serem usados no treinamento."
+33,incorporation_open,"Avaliação inicial durante a coleta e preparação de dados, Não existe uma estratégia formal para assegurar a qualidade dos dados durante o desenvolvimento."
+34,incorporation_open,Não existe uma estratégia formal para assegurar a qualidade dos dados durante o desenvolvimento.
+35,incorporation_open,"Avaliação inicial durante a coleta e preparação de dados, Monitoramento contínuo durante todo o ciclo de vida do modelo"
+36,incorporation_open,"Avaliação inicial durante a coleta e preparação de dados, Monitoramento contínuo durante todo o ciclo de vida do modelo, Não existe uma estratégia formal para assegurar a qualidade dos dados durante o desenvolvimento."
+37,incorporation_open,"Initial assessment during data collection and preparation, Test sets are applied to validate the consistency, completeness and accuracy of the data before it is used for training."
+38,incorporation_open,"Initial assessment during data collection and preparation, Continuous monitoring throughout the model's life cycle, Test sets are applied to validate the consistency, completeness and accuracy of the data before it is used for training."
+39,incorporation_open,"Initial assessment during data collection and preparation, Continuous monitoring throughout the model's life cycle, Test sets are applied to validate the consistency, completeness and accuracy of the data before it is used for training."
+40,incorporation_open,Initial assessment during data collection and preparation
+41,incorporation_open,"Initial assessment during data collection and preparation, Test sets are applied to validate the consistency, completeness and accuracy of the data before it is used for training."
+42,incorporation_open,"Initial assessment during data collection and preparation, Continuous monitoring throughout the model's life cycle"
+43,incorporation_open,Initial assessment during data collection and preparation
+44,incorporation_open,There is no formal strategy for ensuring data quality during development.
+45,incorporation_open,"Initial assessment during data collection and preparation, Test sets are applied to validate the consistency, completeness and accuracy of the data before it is used for training."
+46,incorporation_open,Continuous monitoring throughout the model's life cycle
+47,incorporation_open,Initial assessment during data collection and preparation
+48,incorporation_open,"Initial assessment during data collection and preparation, Continuous monitoring throughout the model's life cycle, Test sets are applied to validate the consistency, completeness and accuracy of the data before it is used for training."
+49,incorporation_open,"Initial assessment during data collection and preparation, There is no formal strategy for ensuring data quality during development."
+50,incorporation_open,"Initial assessment during data collection and preparation, Continuous monitoring throughout the model's life cycle"
+51,incorporation_open,"Continuous monitoring throughout the model's life cycle, Test sets are applied to validate the consistency, completeness and accuracy of the data before it is used for training."
+52,incorporation_open,"Initial assessment during data collection and preparation, Continuous monitoring throughout the model's life cycle, Test sets are applied to validate the consistency, completeness and accuracy of the data before it is used for training."
+53,incorporation_open,"Initial assessment during data collection and preparation, Continuous monitoring throughout the model's life cycle, Test sets are applied to validate the consistency, completeness and accuracy of the data before it is used for training."
+54,incorporation_open,Initial assessment during data collection and preparation
+55,incorporation_open,"Continuous monitoring throughout the model's life cycle, Test sets are applied to validate the consistency, completeness and accuracy of the data before it is used for training."
+0,measurement_open,"Análise de métricas de performance (ex.: precisão, recall), Revisão manual dos resultados"
+1,measurement_open,"Análise de métricas de performance (ex.: precisão, recall), Revisão manual dos resultados"
+2,measurement_open,"Análise de métricas de performance (ex.: precisão, recall)"
+3,measurement_open,"Análise de métricas de performance (ex.: precisão, recall), Revisão manual dos resultados"
+4,measurement_open,"Análise de métricas de performance (ex.: precisão, recall), Revisão manual dos resultados"
+5,measurement_open,"Análise de métricas de performance (ex.: precisão, recall), Revisão manual dos resultados"
+6,measurement_open,"Análise de métricas de performance (ex.: precisão, recall), Revisão manual dos resultados"
+7,measurement_open,"Testes A/B, Análise de métricas de performance (ex.: precisão, recall)"
+8,measurement_open,"Análise de métricas de performance (ex.: precisão, recall)"
+9,measurement_open,"Análise de métricas de performance (ex.: precisão, recall)"
+10,measurement_open,"Testes A/B, Análise de métricas de performance (ex.: precisão, recall)"
+11,measurement_open,"Análise de métricas de performance (ex.: precisão, recall)"
+12,measurement_open,"Análise de métricas de performance (ex.: precisão, recall), Revisão manual dos resultados"
+13,measurement_open,"Análise de métricas de performance (ex.: precisão, recall), Revisão manual dos resultados, Em um projeto atual, são colocadas todas as métricas obtidas pelos modelos que estão sendo testados em uma planilha e organizamos todas as métricas que estão sendo cabiveis para esse projeto assim como as matrizes de confusão para cada modelo, assim podemos ordenar facilmente entre as métricas que queremos observar (estamos focando mais em Recall por ser um projeto voltado para saúde e assim é necessário ter o minímo de falsos negativos possíveis)."
+14,measurement_open,"Análise de métricas de performance (ex.: precisão, recall), Revisão manual dos resultados"
+15,measurement_open,"Testes A/B, Análise de métricas de performance (ex.: precisão, recall)"
+16,measurement_open,"Análise de métricas de performance (ex.: precisão, recall)"
+17,measurement_open,"Testes A/B, Análise de métricas de performance (ex.: precisão, recall)"
+18,measurement_open,"Testes A/B, Análise de métricas de performance (ex.: precisão, recall), Revisão manual dos resultados"
+19,measurement_open,Revisão manual dos resultados
+20,measurement_open,"Análise de métricas de performance (ex.: precisão, recall), Revisão manual dos resultados"
+21,measurement_open,"Testes A/B, Análise de métricas de performance (ex.: precisão, recall)"
+22,measurement_open,"Análise de métricas de performance (ex.: precisão, recall), Revisão manual dos resultados"
+23,measurement_open,"Análise de métricas de performance (ex.: precisão, recall), Revisão manual dos resultados"
+24,measurement_open,"Análise de métricas de performance (ex.: precisão, recall)"
+25,measurement_open,"Análise de métricas de performance (ex.: precisão, recall), Revisão manual dos resultados"
+26,measurement_open,"Análise de métricas de performance (ex.: precisão, recall)"
+27,measurement_open,"Análise de métricas de performance (ex.: precisão, recall), Revisão manual dos resultados"
+28,measurement_open,"Testes A/B, Análise de métricas de performance (ex.: precisão, recall), Revisão manual dos resultados"
+29,measurement_open,"Análise de métricas de performance (ex.: precisão, recall)"
+30,measurement_open,"Análise de métricas de performance (ex.: precisão, recall)"
+31,measurement_open,"Testes A/B, Análise de métricas de performance (ex.: precisão, recall)"
+32,measurement_open,"Testes A/B, Análise de métricas de performance (ex.: precisão, recall), Revisão manual dos resultados"
+33,measurement_open,"Análise de métricas de performance (ex.: precisão, recall), Revisão manual dos resultados"
+34,measurement_open,"Análise de métricas de performance (ex.: precisão, recall)"
+35,measurement_open,"Análise de métricas de performance (ex.: precisão, recall)"
+36,measurement_open,"Testes A/B, Análise de métricas de performance (ex.: precisão, recall)"
+37,measurement_open,Manual review of results
+38,measurement_open,"A/B testing, Analysis of performance metrics (e.g. precision, recall), Manual review of results"
+39,measurement_open,"Analysis of performance metrics (e.g. precision, recall)"
+40,measurement_open,"Analysis of performance metrics (e.g. precision, recall)"
+41,measurement_open,"A/B testing, Analysis of performance metrics (e.g. precision, recall), Manual review of results"
+42,measurement_open,A/B testing
+43,measurement_open,"Analysis of performance metrics (e.g. precision, recall), data exploration analysis before training models"
+44,measurement_open,"Analysis of performance metrics (e.g. precision, recall)"
+45,measurement_open,"A/B testing, Analysis of performance metrics (e.g. precision, recall)"
+46,measurement_open,"Analysis of performance metrics (e.g. precision, recall), Manual review of results"
+47,measurement_open,Manual review of results
+48,measurement_open,"Analysis of performance metrics (e.g. precision, recall)"
+49,measurement_open,"Analysis of performance metrics (e.g. precision, recall), Manual review of results"
+50,measurement_open,"Analysis of performance metrics (e.g. precision, recall), Manual review of results"
+51,measurement_open,"Analysis of performance metrics (e.g. precision, recall)"
+52,measurement_open,"Analysis of performance metrics (e.g. precision, recall), Manual review of results"
+53,measurement_open,"A/B testing, Analysis of performance metrics (e.g. precision, recall), Manual review of results"
+54,measurement_open,"Analysis of performance metrics (e.g. precision, recall)"
+55,measurement_open,"A/B testing, Analysis of performance metrics (e.g. precision, recall), Manual review of results"
+0,documentation_open,"Linguagem estruturada (texto), Ferramentas de Gerenciamento de Projetos (Jira, Trello ou Asana), Documentação Centralizada (Sistemas como Confluence, Google Docs ou Notion)"
+1,documentation_open,"Linguagem estruturada (texto), Reuniões de Alinhamento, Relatórios Periódicos"
+2,documentation_open,"Linguagem estruturada (texto), Ferramentas de Gerenciamento de Projetos (Jira, Trello ou Asana), Documentação Centralizada (Sistemas como Confluence, Google Docs ou Notion), Reuniões de Alinhamento"
+3,documentation_open,"Documentação Centralizada (Sistemas como Confluence, Google Docs ou Notion), Reuniões de Alinhamento, Relatórios Periódicos"
+4,documentation_open,"Linguagem estruturada (texto), Reuniões de Alinhamento"
+5,documentation_open,"Ferramentas de Gerenciamento de Projetos (Jira, Trello ou Asana)"
+6,documentation_open,"Linguagem estruturada (texto), Ferramentas de Gerenciamento de Projetos (Jira, Trello ou Asana), Reuniões de Alinhamento"
+7,documentation_open,"Linguagem estruturada (texto), Ferramentas de Gerenciamento de Projetos (Jira, Trello ou Asana), Reuniões de Alinhamento"
+8,documentation_open,"Ferramentas de Gerenciamento de Projetos (Jira, Trello ou Asana)"
+9,documentation_open,Reuniões de Alinhamento
+10,documentation_open,"Linguagem estruturada (texto), Ferramentas de Gerenciamento de Projetos (Jira, Trello ou Asana), Documentação Centralizada (Sistemas como Confluence, Google Docs ou Notion), Reuniões de Alinhamento, Relatórios Periódicos"
+11,documentation_open,Reuniões de Alinhamento
+12,documentation_open,"Documentação Centralizada (Sistemas como Confluence, Google Docs ou Notion), Reuniões de Alinhamento"
+13,documentation_open,"Linguagem estruturada (texto), Ferramentas de Gerenciamento de Projetos (Jira, Trello ou Asana), Reuniões de Alinhamento, Slack"
+14,documentation_open,"Linguagem estruturada (texto), Documentação Centralizada (Sistemas como Confluence, Google Docs ou Notion), Reuniões de Alinhamento"
+15,documentation_open,"Documentação Centralizada (Sistemas como Confluence, Google Docs ou Notion), Reuniões de Alinhamento"
+16,documentation_open,"Linguagem estruturada (texto), Reuniões de Alinhamento"
+17,documentation_open,"Linguagem estruturada (texto), Ferramentas de Gerenciamento de Projetos (Jira, Trello ou Asana), Documentação Centralizada (Sistemas como Confluence, Google Docs ou Notion), Reuniões de Alinhamento"
+18,documentation_open,"Linguagem estruturada (texto), Documentação Centralizada (Sistemas como Confluence, Google Docs ou Notion), No mesmo MR"
+19,documentation_open,Reuniões de Alinhamento
+20,documentation_open,"Linguagem estruturada (texto), Reuniões de Alinhamento"
+21,documentation_open,"Linguagem estruturada (texto), Reuniões de Alinhamento"
+22,documentation_open,"Linguagem estruturada (texto), Ferramentas de Gerenciamento de Projetos (Jira, Trello ou Asana), Reuniões de Alinhamento"
+23,documentation_open,"Ferramentas de Gerenciamento de Projetos (Jira, Trello ou Asana), Documentação Centralizada (Sistemas como Confluence, Google Docs ou Notion), Reuniões de Alinhamento"
+24,documentation_open,"Linguagem estruturada (texto), Ferramentas de Gerenciamento de Projetos (Jira, Trello ou Asana), Reuniões de Alinhamento"
+25,documentation_open,"Ferramentas de Gerenciamento de Projetos (Jira, Trello ou Asana), Documentação Centralizada (Sistemas como Confluence, Google Docs ou Notion), Reuniões de Alinhamento"
+26,documentation_open,"Linguagem estruturada (texto), Reuniões de Alinhamento"
+27,documentation_open,"Ferramentas de Gerenciamento de Projetos (Jira, Trello ou Asana), Reuniões de Alinhamento"
+28,documentation_open,"Linguagem estruturada (texto), Ferramentas de Gerenciamento de Projetos (Jira, Trello ou Asana), Documentação Centralizada (Sistemas como Confluence, Google Docs ou Notion), Reuniões de Alinhamento, Relatórios Periódicos"
+29,documentation_open,"Ferramentas de Gerenciamento de Projetos (Jira, Trello ou Asana), Reuniões de Alinhamento"
+30,documentation_open,"Ferramentas de Gerenciamento de Projetos (Jira, Trello ou Asana), Reuniões de Alinhamento"
+31,documentation_open,Reuniões de Alinhamento
+32,documentation_open,Reuniões de Alinhamento
+33,documentation_open,"Linguagem estruturada (texto), Relatórios Periódicos"
+34,documentation_open,"Linguagem estruturada (texto), Ferramentas de Gerenciamento de Projetos (Jira, Trello ou Asana), Documentação Centralizada (Sistemas como Confluence, Google Docs ou Notion)"
+35,documentation_open,"Reuniões de Alinhamento, Relatórios Periódicos"
+36,documentation_open,"Linguagem estruturada (texto), Documentação Centralizada (Sistemas como Confluence, Google Docs ou Notion)"
+37,documentation_open,Alignment meetings
+38,documentation_open,"Structured language (text), Centralized documentation (systems such as Confluence, Google Docs or Notion), Alignment meetings, Periodic reports"
+39,documentation_open,"Project management tools (Jira, Trello or Asana), Alignment meetings, Periodic reports"
+40,documentation_open,"Project management tools (Jira, Trello or Asana), Confluence"
+41,documentation_open,"Structured language (text), Project management tools (Jira, Trello or Asana)"
+42,documentation_open,Alignment meetings
+43,documentation_open,"Structured language (text), Alignment meetings"
+44,documentation_open,Alignment meetings
+45,documentation_open,"Structured language (text), Alignment meetings"
+46,documentation_open,No experience
+47,documentation_open,Only solo projects
+48,documentation_open,"Project management tools (Jira, Trello or Asana)"
+49,documentation_open,Structured language (text)
+50,documentation_open,"Centralized documentation (systems such as Confluence, Google Docs or Notion), Alignment meetings, Periodic reports"
+51,documentation_open,"Project management tools (Jira, Trello or Asana), Alignment meetings"
+52,documentation_open,"Alignment meetings, Periodic reports"
+53,documentation_open,"Structured language (text), Project management tools (Jira, Trello or Asana), Alignment meetings, Periodic reports"
+54,documentation_open,Structured language (text)
+55,documentation_open,"Project management tools (Jira, Trello or Asana)"
+0,challenges_open,"Inconsistência entre diferentes fontes de dados, Erros introduzidos durante a coleta e processamento"
+1,challenges_open,"Dados incompletos ou ausentes, Dados desatualizados ou não confiáveis, Falta de ferramentas adequadas para validação da qualidade dos dados"
+2,challenges_open,"Inconsistência entre diferentes fontes de dados, Erros introduzidos durante a coleta e processamento"
+3,challenges_open,"Dados incompletos ou ausentes, Falta de padronização nos formatos de dados, Falta de ferramentas adequadas para validação da qualidade dos dados"
+4,challenges_open,"Inconsistência entre diferentes fontes de dados, Dados incompletos ou ausentes, Falta de padronização nos formatos de dados"
+5,challenges_open,"Inconsistência entre diferentes fontes de dados, Dados incompletos ou ausentes, Falta de padronização nos formatos de dados, Erros introduzidos durante a coleta e processamento"
+6,challenges_open,"Inconsistência entre diferentes fontes de dados, Dados incompletos ou ausentes, Falta de padronização nos formatos de dados"
+7,challenges_open,"Dados incompletos ou ausentes, Falta de padronização nos formatos de dados, Dados desatualizados ou não confiáveis, Erros introduzidos durante a coleta e processamento, Dificuldade na rastreabilidade e versionamento dos dados"
+8,challenges_open,Inconsistência entre diferentes fontes de dados
+9,challenges_open,"Dados incompletos ou ausentes, Falta de padronização nos formatos de dados, Dados desatualizados ou não confiáveis, Erros introduzidos durante a coleta e processamento, Falta de ferramentas adequadas para validação da qualidade dos dados"
+10,challenges_open,"Inconsistência entre diferentes fontes de dados, Dados incompletos ou ausentes, Falta de padronização nos formatos de dados"
+11,challenges_open,"Dados desatualizados ou não confiáveis, Dificuldade na rastreabilidade e versionamento dos dados, Falta de ferramentas adequadas para validação da qualidade dos dados"
+12,challenges_open,"Dados incompletos ou ausentes, Dados desatualizados ou não confiáveis, Erros introduzidos durante a coleta e processamento, Dificuldade na rastreabilidade e versionamento dos dados, Falta de ferramentas adequadas para validação da qualidade dos dados"
+13,challenges_open,"Inconsistência entre diferentes fontes de dados, Dados incompletos ou ausentes, Falta de padronização nos formatos de dados, Dados desatualizados ou não confiáveis, Estrutura dos dados, Natureza dos dados"
+14,challenges_open,"Dados incompletos ou ausentes, Falta de padronização nos formatos de dados, Dados desatualizados ou não confiáveis"
+15,challenges_open,"Inconsistência entre diferentes fontes de dados, Dados incompletos ou ausentes, Dados desatualizados ou não confiáveis, Erros introduzidos durante a coleta e processamento"
+16,challenges_open,"Inconsistência entre diferentes fontes de dados, Dados incompletos ou ausentes, Falta de padronização nos formatos de dados, Dados desatualizados ou não confiáveis, Erros introduzidos durante a coleta e processamento"
+17,challenges_open,"Inconsistência entre diferentes fontes de dados, Dados incompletos ou ausentes, Dados desatualizados ou não confiáveis, Falta de ferramentas adequadas para validação da qualidade dos dados"
+18,challenges_open,"Inconsistência entre diferentes fontes de dados, Dados incompletos ou ausentes"
+19,challenges_open,"Inconsistência entre diferentes fontes de dados, Dados incompletos ou ausentes, Falta de padronização nos formatos de dados, Dados desatualizados ou não confiáveis, Erros introduzidos durante a coleta e processamento, Dificuldade na rastreabilidade e versionamento dos dados, Falta de ferramentas adequadas para validação da qualidade dos dados"
+20,challenges_open,"Inconsistência entre diferentes fontes de dados, Dados incompletos ou ausentes, Falta de padronização nos formatos de dados, Dados desatualizados ou não confiáveis, Dificuldade na rastreabilidade e versionamento dos dados"
+21,challenges_open,"Inconsistência entre diferentes fontes de dados, Dados incompletos ou ausentes, Falta de padronização nos formatos de dados, Dados desatualizados ou não confiáveis"
+22,challenges_open,"Inconsistência entre diferentes fontes de dados, Falta de padronização nos formatos de dados, Falta de ferramentas adequadas para validação da qualidade dos dados"
+23,challenges_open,"Inconsistência entre diferentes fontes de dados, Dados desatualizados ou não confiáveis, Dificuldade na rastreabilidade e versionamento dos dados, Falta de ferramentas adequadas para validação da qualidade dos dados"
+24,challenges_open,"Inconsistência entre diferentes fontes de dados, Dados desatualizados ou não confiáveis, Dificuldade na rastreabilidade e versionamento dos dados, Falta de ferramentas adequadas para validação da qualidade dos dados"
+25,challenges_open,"Inconsistência entre diferentes fontes de dados, Dados incompletos ou ausentes, Dificuldade na rastreabilidade e versionamento dos dados, Falta de ferramentas adequadas para validação da qualidade dos dados"
+26,challenges_open,"Dados incompletos ou ausentes, Erros introduzidos durante a coleta e processamento"
+27,challenges_open,"Dados incompletos ou ausentes, Dados desatualizados ou não confiáveis, Erros introduzidos durante a coleta e processamento, Falta de ferramentas adequadas para validação da qualidade dos dados"
+28,challenges_open,"Inconsistência entre diferentes fontes de dados, Dados incompletos ou ausentes, Falta de padronização nos formatos de dados, Dados desatualizados ou não confiáveis, Erros introduzidos durante a coleta e processamento"
+29,challenges_open,Erros introduzidos durante a coleta e processamento
+30,challenges_open,"Dados incompletos ou ausentes, Falta de ferramentas adequadas para validação da qualidade dos dados"
+31,challenges_open,"Inconsistência entre diferentes fontes de dados, Dados incompletos ou ausentes, Dados desatualizados ou não confiáveis, Erros introduzidos durante a coleta e processamento, Dificuldade na rastreabilidade e versionamento dos dados"
+32,challenges_open,"Dados incompletos ou ausentes, Falta de padronização nos formatos de dados, Dados desatualizados ou não confiáveis, Erros introduzidos durante a coleta e processamento"
+33,challenges_open,"Inconsistência entre diferentes fontes de dados, Dados incompletos ou ausentes, Falta de padronização nos formatos de dados"
+34,challenges_open,"Inconsistência entre diferentes fontes de dados, Dados desatualizados ou não confiáveis, Dificuldade na rastreabilidade e versionamento dos dados, Falta de ferramentas adequadas para validação da qualidade dos dados"
+35,challenges_open,"Erros introduzidos durante a coleta e processamento, Falta de ferramentas adequadas para validação da qualidade dos dados"
+36,challenges_open,"Inconsistência entre diferentes fontes de dados, Dados incompletos ou ausentes, Falta de padronização nos formatos de dados, Dados desatualizados ou não confiáveis, Erros introduzidos durante a coleta e processamento, Dificuldade na rastreabilidade e versionamento dos dados, Falta de ferramentas adequadas para validação da qualidade dos dados"
+37,challenges_open,"Lack of standardization in data formats, Errors introduced during collection and processing, Lack of adequate tools for validating data quality"
+38,challenges_open,"Incomplete or missing data, Errors introduced during collection and processing"
+39,challenges_open,"Inconsistency between different data sources, Incomplete or missing data, Lack of standardization in data formats, Difficulty in data traceability and versioning"
+40,challenges_open,"Inconsistency between different data sources, Incomplete or missing data, Lack of standardization in data formats, Difficulty in data traceability and versioning, Lack of adequate tools for validating data quality"
+41,challenges_open,"Inconsistency between different data sources, Incomplete or missing data, Lack of standardization in data formats, Lack of adequate tools for validating data quality"
+42,challenges_open,"Errors introduced during collection and processing, Lack of adequate tools for validating data quality"
+43,challenges_open,"Incomplete or missing data, Outdated or unreliable data, Lack of adequate tools for validating data quality"
+44,challenges_open,"Inconsistency between different data sources, Lack of standardization in data formats"
+45,challenges_open,"Incomplete or missing data, Outdated or unreliable data"
+46,challenges_open,"Errors introduced during collection and processing, Lack of adequate tools for validating data quality"
+47,challenges_open,"Inconsistency between different data sources, Incomplete or missing data"
+48,challenges_open,"Inconsistency between different data sources, Incomplete or missing data, Errors introduced during collection and processing"
+49,challenges_open,"Inconsistency between different data sources, Lack of standardization in data formats, Outdated or unreliable data"
+50,challenges_open,"Inconsistency between different data sources, Incomplete or missing data, Errors introduced during collection and processing"
+51,challenges_open,"Inconsistency between different data sources, Incomplete or missing data, Lack of standardization in data formats, Errors introduced during collection and processing"
+52,challenges_open,"Inconsistency between different data sources, Lack of standardization in data formats, Outdated or unreliable data"
+53,challenges_open,"Incomplete or missing data, Outdated or unreliable data, Errors introduced during collection and processing, Difficulty in data traceability and versioning"
+54,challenges_open,"Incomplete or missing data, Lack of standardization in data formats, Outdated or unreliable data"
+55,challenges_open,"Inconsistency between different data sources, Outdated or unreliable data"
