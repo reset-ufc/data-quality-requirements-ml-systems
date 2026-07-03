@@ -73,6 +73,10 @@ Name: count, dtype: int64
 
 The project does not require significant computing power, so there are likely no obstacles to running it, even on lower-end hardware.
 
+### Software environments
+
+The entire project was carried out and executed using only the Windows 11 operating system; therefore, there is no guarantee - as we have not tested it - that the same results can be achieved using another system.
+
 
 ## Repository Structure
 
