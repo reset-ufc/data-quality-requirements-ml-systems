@@ -1,6 +1,12 @@
 # Replication Package — Practitioners' Perceptions of Data Quality Requirements in Machine Learning-Enabled Systems: An Exploratory Survey
 
-This repository contains the replication package for the study *"Practitioners' Perceptions of Data Quality Requirements in Machine Learning-Enabled Systems: An Exploratory Survey"*. It provides all data, analysis notebooks, and generated artifacts (figures and tables) needed to reproduce the results reported in the paper.
+This repository contains the replication package for the study *"Practitioners' Perceptions of Data Quality Requirements in Machine Learning-Enabled Systems: An Exploratory Survey"*. It provides all data, analysis scripts, and generated documents (figures and tables) of the results reported in the paper.
+
+
+
+## Context
+
+
 
 ---
 
@@ -59,9 +65,64 @@ This repository contains the replication package for the study *"Practitioners' 
 
 ---
 
-## Execution Order
+## Instalation and Usage
+To get started, follow the steps below:
+
+### Requirements
+
+* Python ≥ 3.12
+* An environment compaible with .ipynb format, like: Jupyter, JupyterLab, Google Colab, VSCode (with Jupyter extension), etc
+
+### Clone the repository
+
+```bash
+git clone https://github.com/reset-ufc/qualidade-de-dados-em-sistemas-aprendizado-de-maquina.git
+cd qualidade-de-dados-em-sistemas-aprendizado-de-maquina
+```
+
+### Create a virtual environment
+
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows use: venv\Scripts\activate
+```
+
+### Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
 
 Run the notebooks in the following order. Each notebook reads outputs produced by the previous one.
+
+### Test the setup
+To confirm that everything is working:
+
+1. Open `notebooks\data_cleaning.ipynb`
+2. Run all cells.
+
+The environment is set up correctly and the code is executing as expected if all cells run without executing errors, and the output of the fifth cell is exactly this:
+```
+norm_country
+Brazil           42
+United States     5
+Germany           4
+France            2
+Ireland           1
+Colombia          1
+China             1
+Name: count, dtype: int64
+```
+
+### Hardware Setup Used
+
+* CPU: Intel Core i5-13450HX
+* RAM: 16 GB
+* GPU: NVIDIA RTX 3050  6 GB
+
+
+The project does not require significant computing power, so there are likely no obstacles to running it, even on lower-end hardware.
+
 
 ### Step 1 — `data_cleaning.ipynb`
 
@@ -132,16 +193,6 @@ Analyzes the main challenges practitioners face in ensuring data quality and how
 | File | Element Number |
 |------|----------------|
 | `figures/challenges_support_q21_q22.pdf` | Figure 6 |
-
----
-
-## Setup
-
-**Requirements:** Python ≥ 3.12
-
-```bash
-pip install -r requirements.txt
-```
 
 ---
 
