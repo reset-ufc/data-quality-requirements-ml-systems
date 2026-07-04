@@ -208,6 +208,6 @@ Analyzes the main challenges practitioners face in ensuring data quality and how
 
 ## Dataset
 
-The responses of the two surveys (english and portuguese) are included in `data/raw/` for transparency, but the field email was removed from the files to preserve participants privacy. The codebooks in `data/codebook/` document the qualitative coding applied to open-ended responses (Q10, Q12, Q14, Q15).
+The responses from both surveys (English and Portuguese) are available in `data/raw/` for transparency. To protect participants' privacy, the email field has been removed from both datasets. **The Free and Informed Consent Form and the Survey Script** for both the PT-BR and EN-US versions are available in `survey_artifacts/`.
 
-**Free and Informed Consent Form and Survey Script** of PT-BR and EN-US versions are in /survey artifacts.
+The codebooks in `data/codebook/` document the qualitative coding applied to the open-ended responses for Q10, Q12, Q14, and Q15. Each codebook contains two worksheets: Original, which includes the topic and subtopic names in Portuguese along with the responses in their original form, and EN-US, which provides an English translation of all the content.
