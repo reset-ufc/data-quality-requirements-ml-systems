@@ -245,4 +245,6 @@ The released data should be used only for research, review, and replication purp
 
 ## License
 
-This replication package is distributed under the terms specified in the `LICENSE` file.
+This replication package is released under the MIT License. This applies to the code, notebooks, anonymized datasets, qualitative codebooks, figures, tables, survey instruments, and documentation included in this repository.
+
+See the `LICENSE` file for details.
