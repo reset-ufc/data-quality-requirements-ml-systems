@@ -1,11 +1,10 @@
 # Practitioners' Perceptions of Data Quality Requirements in Machine Learning-Enabled Systems: An Exploratory Survey
 
-This repository contains the replication package for the study ["Practitioners' Perceptions of Data Quality Requirements in Machine Learning-Enabled Systems: An Exploratory Survey"](paper/SBES___2026___Kevin___Data_Quality_Requirements_in_ML_Enabled_Systems.pdf). It provides all data, analysis scripts, and generated documents (figures and tables) of the results reported in the paper.
-
-
+This repository contains the replication package for the study ["Practitioners' Perceptions of Data Quality Requirements in Machine Learning-Enabled Systems: An Exploratory Survey"](paper/SBES___2026___Kevin___Data_Quality_Requirements_in_ML_Enabled_Systems.pdf).  It includes the anonymized survey data, qualitative coding material, analysis notebooks, scripts, and generated figures and tables reported in the paper.
+ 
 ## Context
 
-Data quality is an essential factor for the performance, reliability, and security of machine learning-based systems, yet it is still treated implicitly and inconsistently in practice. This study investigates—through an exploratory survey of 56 professionals from seven countries—how these professionals perceive, prioritize, and manage data quality throughout the ML system lifecycle.
+Data quality affects the performance, reliability, and trustworthiness of machine learning-enabled systems, yet it is often treated implicitly and inconsistently in practice. This study investigates, through an exploratory survey with 56 practitioners from seven countries, how practitioners perceive, prioritize, evaluate, and manage data quality throughout the ML system lifecycle.
 
 ---
 
@@ -17,13 +16,16 @@ Data quality is an essential factor for the performance, reliability, and securi
 | **RQ₂** | How do practitioners evaluate and incorporate data quality requirements throughout the ML lifecycle? |
 | **RQ₃** | What challenges do practitioners face when ensuring data quality in practice? |
 
+## Reproducibility Scope
 
-## Instalation and Usage
+This replication package allows reproducing the processed datasets, descriptive statistics, qualitative coding summaries, correlation table, and all figures reported in the paper. Running the notebooks in the specified order regenerates Figures 1–6 and Table 3.
+
+## Installation and Usage
 
 ### Requirements
 
 * Python ≥ 3.12
-* An environment compaible with .ipynb format, like: Jupyter, JupyterLab, Google Colab, VSCode (with Jupyter extension), etc
+* An environment compatible with `.ipynb` files, such as Jupyter, JupyterLab, Google Colab, or VSCode with the Jupyter extension.
 
 ### Clone the repository
 
@@ -46,12 +48,14 @@ pip install -r requirements.txt
 ```
 
 ### Test the setup
-To confirm that everything is working:
+
+To confirm that the environment is correctly configured:
 
 1. Open `notebooks\data_cleaning.ipynb`
 2. Run all cells.
 
-The environment is set up correctly and the code is executing as expected if all cells run without executing errors, and the output of the fifth cell is exactly this:
+The setup is working correctly if all cells run without execution errors and the output of the fifth cell is exactly:
+
 ```
 norm_country
 Brazil           42
@@ -64,45 +68,47 @@ China             1
 Name: count, dtype: int64
 ```
 
+### Estimated Execution Time
+
+Running all notebooks takes approximately 15 seconds on the hardware described below. The package does not require GPU acceleration.
+
 ### Hardware Setup Used
 
 * CPU: Intel Core i5-13450HX
 * RAM: 16 GB
 * GPU: NVIDIA RTX 3050  6 GB
 
-
-The project does not require significant computing power, so there are likely no obstacles to running it, even on lower-end hardware.
+The project does not require significant computing power and should run on lower-end hardware.
 
 ### Software environments
 
-The entire project was carried out and executed using only the Windows 11 operating system; therefore, there is no guarantee - as we have not tested it - that the same results can be achieved using another system.
-
+The package was developed and tested on Windows 11. It should also run on Linux and macOS with a compatible Python environment, but these systems were not explicitly tested.
 
 ## Repository Structure
 
 ```
 .
 ├── data/
-│   ├── raw/                        # Original (anonymized), translated and mapped surveys 
+│   ├── raw/                        # Original anonymized, translated, and mapped survey data 
 │   │   ├── survey_responses.xlsx   # Portuguese form 
 │   │   ├── survey_responses_2.xlsx # English form 
 │   │   ├── parcial_quali.xlsx      # Categorical responses mapped to English 
-│   │   └── full_quali.xlsx         # Open responses translated to English
+│   │   └── full_quali.xlsx         # Open-ended responses translated to English
 │   ├── processed/                  # Cleaned and normalized data 
-│   │   ├── anonymized.csv          # Cleaned data for notebooks
-│   │   ├── likert_importance.csv   # Long-format importance ratings 
+│   │   ├── anonymized.csv          # Cleaned data used by the notebooks
+│   │   ├── likert_importance.csv   # Long-format importance ratings
 │   │   ├── likert_priority.csv     # Long-format priority ratings 
 │   │   ├── skills.csv              # Long-format skill self-assessments 
 │   │   ├── open_responses.csv      # Open-ended responses 
-│   │   ├── words.csv               # Q9 word associations with position 
+│   │   ├── words.csv               # Q9 word associations by position
 │   │   └── tables/
-│   │       └── spearman_imp_vs_pri.tex  # LaTeX table: Spearman correlation results
+│   │       └── spearman_imp_vs_pri.tex  # LaTeX table with Spearman correlation results
 │   └── codebook/          # Qualitative coding of open-ended responses
 │       ├── Q10.xlsx       # RE experience narratives
 │       ├── Q12.xlsx       # Importance justifications
 │       ├── Q14.xlsx       # Priority justifications
 │       └── Q15.xlsx       # Trade-off balance strategies
-├── figures/   # Publication-ready PDF figures (output of notebooks)
+├── figures/   # Publication-ready PDF figures generated by the notebooks
 │   ├── skills_diverging.pdf
 │   ├── q9_top_words_by_position.pdf
 │   ├── importance_priority_diverging.pdf
@@ -110,15 +116,15 @@ The entire project was carried out and executed using only the Windows 11 operat
 │   ├── mc_group_heatmap_2x2.pdf
 │   └── challenges_support_q21_q22.pdf
 ├── notebooks/
-│   ├── utils.py                            # Shared utilities (plotting, parsing, statistics)
+│   ├── utils.py                            # Shared utilities for plotting, parsing, and statistics
 │   ├── data_cleaning.ipynb                 # Step 1 — data normalization and anonymization
 │   ├── demographic_characterization.ipynb  # Step 2 — participant characterization
 │   ├── RQ1.ipynb                           # Step 3 — perception and prioritization (Q9–Q16)
 │   ├── RQ2.ipynb                           # Step 4 — implementation practices (Q17–Q20)
 │   └── RQ3.ipynb                           # Step 5 — challenges and support (Q21–Q22)
-├── paper /
+├── paper/
 │   └── SBES___2026___Kevin___Data_Quality_Requirements_in_ML_Enabled_Systems.pdf
-├── survey artifacts/               # Consent forms and survey scripts
+├── survey_artifacts/               # Consent forms and survey scripts
 │   ├── Free and Informed Consent Form (FICF)_data_quality_en.pdf
 │   ├── Script_survey_data_quality_EN.pdf
 │   ├── Script_survey_data_quality_PT_BR.pdf
@@ -129,19 +135,19 @@ The entire project was carried out and executed using only the Windows 11 operat
 └── LICENSE
 ```
 
-## Running the package, step by step
+## Running the Package Step by Step
 
 Run the notebooks (all cells) in the following order. Each notebook reads outputs produced by the previous one.
 
 ### Step 1 — ```data_cleaning.ipynb```
 
-(You don't need to run it again if, you already ran it to test the setup.)
+Loads both survey forms (PT and EN), validates consent, normalizes responses, maps Likert-scale answers to numeric values, anonymizes the data, and exports processed datasets to `data/processed/` and `data/raw/`
 
-Loads both survey forms (PT and EN), validates consent, normalizes responses, maps Likert text to numeric scales, and exports all processed datasets to `data/processed/` and `data/raw/`
+You do not need to run this notebook again if you already ran it to test the setup.
 
 ### Step 2 — `demographic_characterization.ipynb`
 
-Characterizes the 56 survey respondents (Q1–Q8): demographics (age, gender, country, education, role, seniority, number of projects) and self-assessed skills across 10 data-processing activities.
+Characterizes the 56 survey respondents from Q1--Q8, including age, gender, country, education, role, seniority, number of ML projects, and self-assessed skills across ten data-processing activities.
 
 **Figure generated:**
 
@@ -153,12 +159,14 @@ Characterizes the 56 survey respondents (Q1–Q8): demographics (age, gender, co
 
 ### Step 3 — `RQ1.ipynb` (addresses RQ₁)
 
-Analyzes how practitioners perceive and prioritize data quality characteristics (Q9–Q16).
+Addresses RQ1 by analyzing how practitioners perceive and prioritize data quality characteristics from Q9--Q16.
 
 **Analyses:**
-- **Q9** – Word association task: 279 tokens normalized to English, frequency by word position.
-- **Q11 & Q13** – Importance vs. priority ratings for 13 data quality characteristics. Spearman's rank correlation coefficient computed for all 13 characteristics.
-- **Q16** – Perceptions of data version control impact.
+
+- **Q9** – Word association task: 279 tokens normalized to English and analyzed by word position.
+- **Q11 & Q13** – Importance vs. priority ratings for 13 data quality characteristics.
+- **Q11 & Q13** – Spearman's rank correlation coefficient between importance and priority, considering all 13 characteristics.
+- **Q16** – Perceptions of the impact of data version control on data quality.
 
 **Figures and tables generated:**
 
@@ -172,14 +180,15 @@ Analyzes how practitioners perceive and prioritize data quality characteristics 
 
 ### Step 4 — `RQ2.ipynb` (addresses RQ₂)
 
-Analyzes how data quality is incorporated into the ML development process (Q17–Q20).
+Addresses RQ2 by analyzing how data quality is incorporated into the ML development process from Q17--Q20.
 
 **Analyses:**
-- **Q17** – How data quality is incorporated.
-- **Q18** – How model quality impact is measured.
-- **Q19** – Frequency of formal data quality discussions.
+
+- **Q17** – How data quality is incorporated into the development process.
+- **Q18** – How the impact of data quality on model performance is measured.
+- **Q19** – Frequency of formal discussions about data quality requirements.
 - **Q20** – Documentation and communication practices.
-- **Cross-group breakdowns** – Heatmaps comparing responses across career stage, data vs. product focus, and project volume.
+- **Cross-group breakdowns** – Heatmaps comparing responses by career stage, data vs. product focus, and project volume.
 
 **Figures generated:**
 
@@ -192,11 +201,12 @@ Analyzes how data quality is incorporated into the ML development process (Q17�
 
 ### Step 5 — `RQ3.ipynb` (addresses RQ₃)
 
-Analyzes the main challenges practitioners face in ensuring data quality and how often they receive support from other teams (Q21–Q22).
+Addresses RQ3 by analyzing the main challenges practitioners face in ensuring data quality and how often they receive support from other teams from Q21--Q22.
 
 **Analyses:**
-- **Q21** – Main challenges: inconsistency between sources, missing data, lack of standardization, outdated data, collection errors, traceability difficulties, lack of tools.
-- **Q22** – Frequency of support from other teams, e.g., data engineers and data scientists.
+
+- **Q21** – Main challenges, including incomplete data, inconsistency across sources, lack of standardization, outdated data, collection errors, traceability difficulties, and lack of validation tools.
+- **Q22** – Frequency of support from other teams, such as data teams, data engineers, or data scientists.
 
 **Figure generated:**
 
@@ -206,8 +216,33 @@ Analyzes the main challenges practitioners face in ensuring data quality and how
 
 ---
 
-## Dataset
+### Expected Outputs
 
-The responses from both surveys (English and Portuguese) are available in `data/raw/` for transparency. To protect participants' privacy, the email field has been removed from both datasets. **The Free and Informed Consent Form and the Survey Script** for both the PT-BR and EN-US versions are available in `survey_artifacts/`.
+After running all notebooks, the following outputs should be regenerated:
 
-The codebooks in `data/codebook/` document the qualitative coding applied to the open-ended responses for Q10, Q12, Q14, and Q15. Each codebook contains two worksheets: Original, which includes the topic and subtopic names in Portuguese along with the responses in their original form, and EN-US, which provides an English translation of all the content.
+* `figures/skills_diverging.pdf`
+* `figures/q9_top_words_by_position.pdf`
+* `figures/importance_priority_diverging.pdf`
+* `figures/implementation_q17_q20.pdf`
+* `figures/mc_group_heatmap_2x2.pdf`
+* `figures/challenges_support_q21_q22.pdf`
+* `data/processed/tables/spearman_imp_vs_pri.tex`
+
+## Dataset and Anonymization
+
+The responses from both surveys, in English and Portuguese, are available in `data/raw/` for transparency. To protect participants' privacy, the email field and any optional contact information were removed before release.
+
+The processed datasets used by the notebooks are available in `data/processed/`. These files contain cleaned, normalized, and anonymized data prepared for quantitative and qualitative analysis.
+
+The Free and Informed Consent Forms and survey scripts for both the PT-BR and EN-US versions are available in `survey_artifacts/`.
+
+The codebooks in `data/codebook/` document the qualitative coding applied to the open-ended responses for Q10, Q12, Q14, and Q15. Each codebook contains two worksheets:
+
+* `Original`: includes topic and subtopic names in Portuguese, along with responses in their original form.
+* `EN-US`: provides English translations of the topics, subtopics, and responses.
+
+The released data should be used only for research, review, and replication purposes.
+
+## License
+
+This replication package is distributed under the terms specified in the `LICENSE` file.
