@@ -1610,7 +1610,7 @@ def four_question_heatmaps_2x2(
     cbar.set_ticklabels([f"{int(p * 100)}%" for p in tick_pcts], fontsize=fs_colorbar)
     cbar.ax.tick_params(labelsize=fs_colorbar)
     cbar.outline.set_linewidth(0.5)
-    cbar.set_label("% of panel total", fontsize=fs_colorbar + 2, labelpad=6)
+    cbar.set_label("% of respondents within each profile", fontsize=fs_colorbar + 2, labelpad=6)
 
     return fig
 
