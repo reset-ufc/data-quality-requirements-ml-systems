@@ -28,8 +28,8 @@ Data quality is an essential factor for the performance, reliability, and securi
 ### Clone the repository
 
 ```bash
-git clone https://github.com/reset-ufc/qualidade-de-dados-em-sistemas-aprendizado-de-maquina.git
-cd qualidade-de-dados-em-sistemas-aprendizado-de-maquina
+git clone https://github.com/reset-ufc/data-quality-requirements-ml-systems.git
+cd data-quality-requirements-ml-systems
 ```
 
 ### Create a virtual environment
