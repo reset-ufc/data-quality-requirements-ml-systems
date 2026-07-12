@@ -10,16 +10,9 @@ Data quality affects the performance, reliability, and trustworthiness of machin
 
 ## Research Questions
 
-<table>
-<thead>
-<tr><th>RQ</th><th>Question</th></tr>
-</thead>
-<tbody>
-<tr><td><strong>RQ₁</strong></td><td>How do practitioners perceive and prioritize data quality characteristics in ML-enabled systems?</td></tr>
-<tr><td><strong>RQ₂</strong></td><td>How do practitioners evaluate and incorporate data quality throughout the ML development lifecycle?</td></tr>
-<tr><td><strong>RQ₃</strong></td><td>What challenges do practitioners face when ensuring data quality in ML projects?</td></tr>
-</tbody>
-</table>
+- **RQ₁** — How do practitioners perceive and prioritize data quality characteristics in ML-enabled systems?
+- **RQ₂** — How do practitioners evaluate and incorporate data quality throughout the ML development lifecycle?
+- **RQ₃** — What challenges do practitioners face when ensuring data quality in ML projects?
 
 ## Reproducibility Scope
 
@@ -128,8 +121,8 @@ The package was developed and tested on Windows 11. It should also run on Linux 
 │   ├── RQ2.ipynb                           # Step 4 — implementation practices (Q17–Q20)
 │   └── RQ3.ipynb                           # Step 5 — challenges and support (Q21–Q22)
 ├── paper/
-│   └── SBES___2026___Kevin___Data_Quality_Requirements_in_ML_Enabled_Systems.pdf
-├── survey_artifacts/               # Consent forms and survey scripts
+│   └── pontes2026data.pdf
+├── survey_artifacts/  # Consent forms and survey scripts
 │   ├── Free and Informed Consent Form (FICF)_data_quality_en.pdf
 │   ├── Script_survey_data_quality_EN.pdf
 │   ├── Script_survey_data_quality_PT_BR.pdf
@@ -156,14 +149,7 @@ Characterizes the 56 survey respondents from Q1--Q8, including age, gender, coun
 
 **Figure generated:**
 
-<table>
-<thead>
-<tr><th>File</th><th>Element Number</th></tr>
-</thead>
-<tbody>
-<tr><td><code>figures/skills_diverging.pdf</code></td><td>Figure 1</td></tr>
-</tbody>
-</table>
+- `figures/skills_diverging.pdf` — Figure 1
 
 ---
 
@@ -180,16 +166,9 @@ Addresses RQ1 by analyzing how practitioners perceive and prioritize data qualit
 
 **Figures and tables generated:**
 
-<table>
-<thead>
-<tr><th>File</th><th>Element Number</th></tr>
-</thead>
-<tbody>
-<tr><td><code>figures/q9_top_words_by_position.pdf</code></td><td>Figure 2</td></tr>
-<tr><td><code>figures/importance_priority_diverging.pdf</code></td><td>Figure 3</td></tr>
-<tr><td><code>data/processed/tables/spearman_imp_vs_pri.tex</code></td><td>Table 3</td></tr>
-</tbody>
-</table>
+- `figures/q9_top_words_by_position.pdf` — Figure 2
+- `figures/importance_priority_diverging.pdf` — Figure 3
+- `data/processed/tables/spearman_imp_vs_pri.tex` — Table 3
 
 ---
 
@@ -207,15 +186,8 @@ Addresses RQ2 by analyzing how data quality is incorporated into the ML developm
 
 **Figures generated:**
 
-<table>
-<thead>
-<tr><th>File</th><th>Element Number</th></tr>
-</thead>
-<tbody>
-<tr><td><code>figures/implementation_q17_q20.pdf</code></td><td>Figure 4</td></tr>
-<tr><td><code>figures/mc_group_heatmap_2x2.pdf</code></td><td>Figure 5</td></tr>
-</tbody>
-</table>
+- `figures/implementation_q17_q20.pdf` — Figure 4
+- `figures/mc_group_heatmap_2x2.pdf` — Figure 5
 
 ---
 
@@ -230,14 +202,7 @@ Addresses RQ3 by analyzing the main challenges practitioners face in ensuring da
 
 **Figure generated:**
 
-<table>
-<thead>
-<tr><th>File</th><th>Element Number</th></tr>
-</thead>
-<tbody>
-<tr><td><code>figures/challenges_support_q21_q22.pdf</code></td><td>Figure 6</td></tr>
-</tbody>
-</table>
+- `figures/challenges_support_q21_q22.pdf` — Figure 6
 
 ---
 
