@@ -13,8 +13,8 @@ Data quality affects the performance, reliability, and trustworthiness of machin
 | RQ | Question |
 |----|----------|
 | **RQ₁** | How do practitioners perceive and prioritize data quality characteristics in ML-enabled systems? |
-| **RQ₂** | How do practitioners evaluate and incorporate data quality requirements throughout the ML lifecycle? |
-| **RQ₃** | What challenges do practitioners face when ensuring data quality in practice? |
+| **RQ₂** | How do practitioners evaluate and incorporate data quality throughout the ML development lifecycle? |
+| **RQ₃** | What challenges do practitioners face when ensuring data quality in ML projects? |
 
 ## Reproducibility Scope
 
